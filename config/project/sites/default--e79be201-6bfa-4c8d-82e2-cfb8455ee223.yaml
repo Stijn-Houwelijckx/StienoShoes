@@ -1,0 +1,8 @@
+baseUrl: $PRIMARY_SITE_URL
+handle: default
+hasUrls: true
+language: en-US
+name: StienoShoes
+primary: true
+siteGroup: a246d019-06f9-40be-8bb2-78cfd99eb387 # StienoShoes
+sortOrder: 1

@@ -1,0 +1,22 @@
+dateModified: 1703707847
+email:
+  fromEmail: stijn@houwelijckx.be
+  fromName: StienoShoes
+  transportType: craft\mail\transportadapters\Sendmail
+meta:
+  __names__:
+    12a23e1e-d239-4fe3-a9d8-4dbdb167eaea: Common # Common
+    a246d019-06f9-40be-8bb2-78cfd99eb387: StienoShoes # StienoShoes
+    e79be201-6bfa-4c8d-82e2-cfb8455ee223: StienoShoes # StienoShoes
+system:
+  edition: solo
+  live: true
+  name: StienoShoes
+  schemaVersion: 4.5.3.0
+  timeZone: America/Los_Angeles
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: null
+  photoVolumeUid: null
+  requireEmailVerification: true

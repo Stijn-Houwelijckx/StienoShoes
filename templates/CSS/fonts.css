@@ -1,0 +1,39 @@
+/* CSS/fonts.css */
+
+/* Adineue PRO Regular */
+@font-face {
+  font-family: "Adineue PRO";
+  src: url("../assets/fonts/adineue PRO.woff2") format("woff2"),
+    url("../assets/fonts/adineue PRO.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Adineue PRO Black */
+@font-face {
+  font-family: "Adineue PRO Black";
+  src: url("../assets/fonts/adineue PRO Black Web Regular.woff2")
+      format("woff2"),
+    url("../assets/fonts/adineue PRO Black Web Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Adineue PRO Bold */
+@font-face {
+  font-family: "Adineue PRO Bold";
+  src: url("../assets/fonts/adineue PRO Bold Web Regular.woff2") format("woff2"),
+    url("../assets/fonts/adineue PRO Bold Web Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Adineue PRO Light */
+@font-face {
+  font-family: "Adineue PRO Light";
+  src: url("../assets/fonts/adineue PRO Light Web Regular.woff2")
+      format("woff2"),
+    url("../assets/fonts/adineue PRO Light Web Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}

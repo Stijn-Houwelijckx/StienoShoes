@@ -27,3 +27,27 @@ closeBtn.addEventListener("click", () => {
 //===== End Mobile Navigation =====//
 
 // ============================================================================================== //
+
+//===== Begin Card Dropdown =====//
+
+const advantageCard = document.querySelectorAll(
+  ".advantage-cards-container .card"
+);
+const advantageCardHandle = document.querySelectorAll(
+  ".advantage-cards-container .card .dropdown-head"
+);
+
+advantageCardHandle.forEach((item) => {
+  item.addEventListener("click", () => {
+    visibility = item.parentNode.getAttribute("data-visible");
+    // console.log(e.target);
+
+    if (visibility === "false") {
+      item.parentNode.setAttribute("data-visible", "true");
+    } else if (visibility === "true") {
+      item.parentNode.setAttribute("data-visible", "false");
+    }
+  });
+});
+
+//===== End Card Dropdown =====//

@@ -4,8 +4,8 @@
 :root {
   /* Font */
   /* Font-Family */
-  --ff-heading: "Adineue PRO Bold", "Segoe UI", sans-serif;
-  --ff-body: "Adineue PRO", "Segoe UI", sans-serif;
+  --ff-bold: "Adineue PRO Bold", "Segoe UI", sans-serif;
+  --ff-regular: "Adineue PRO", "Segoe UI", sans-serif;
   --ff-light: "Adineue PRO Light", "Segoe UI", sans-serif;
 
   /* Font-Size */
@@ -45,3 +45,136 @@
     var(--clr-gradient-clr-right) 100%
   );
 }
+
+/* ======================================================================== 
+||                              General                                  ||
+||                         -----------------                             ||
+||                                                                       ||
+||                                                                       ||
+======================================================================== */
+
+body {
+  background-color: var(--clr-neutral-700);
+  color: var(--clr-neutral-100);
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+/* End General */
+
+/* ======================================================================== 
+||                             Typography                                ||
+||                          ----------------                             ||
+||                                                                       ||
+||                                                                       ||
+======================================================================== */
+
+.primary-navigation .nav-link a {
+  font-family: var(--ff-bold);
+  font-size: var(--fs-nav);
+  color: var(--clr-neutral-100);
+}
+
+/* End Typography */
+
+/* ======================================================================== 
+||                             Navigation                                ||
+||                          ----------------                             ||
+||  1.  Logo                                                             ||
+||  2.  Links                                                            ||
+||  3.  Menu-Burger button                                               ||
+||  4.  Mobile view                                                      ||
+||                                                                       ||
+======================================================================== */
+
+.primary-header {
+  position: fixed;
+  width: 100%;
+  height: 70px;
+  top: 0;
+
+  background: var(--clr-bg-gradient);
+}
+
+.primary-header .wrapper {
+  display: flex;
+  height: 100%;
+
+  padding: 0 16px;
+
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  height: 34px;
+}
+
+.logo img {
+  width: 158px;
+  height: 34px;
+}
+
+.primary-navigation {
+  background: hsl(0, 0%, 0%, 0.8);
+}
+
+@supports (backdrop-filter: blur(1rem)) {
+  .primary-navigation {
+    background: hsl(0, 0%, 0%, 0.5);
+    backdrop-filter: blur(1rem);
+  }
+}
+
+.primary-navigation {
+  display: flex;
+  position: fixed;
+
+  width: 100%;
+  height: 100%;
+
+  align-items: center;
+  justify-content: center;
+
+  transform: translateX(100%) translateY(calc(50% + 35px));
+  transition: transform 350ms ease-out;
+
+  z-index: 1000;
+
+  /* display: none; */
+}
+
+.primary-navigation[data-visible="true"] {
+  left: 50%;
+  transform: translateX(-50%) translateY(calc(50% + 35px));
+}
+
+.primary-nav-list {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+
+  gap: 2rem;
+
+  margin: 0;
+  padding: 0;
+}
+
+.primary-navigation .close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.nav-icon-container .mobile-burger {
+  margin-left: 16px;
+}
+
+.search-icon {
+  display: none;
+}
+
+/* End Navigation */

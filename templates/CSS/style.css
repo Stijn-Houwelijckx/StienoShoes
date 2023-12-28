@@ -1,2 +1,47 @@
 /* Import custom fonts */
 @import url("fonts.css");
+
+:root {
+  /* Font */
+  /* Font-Family */
+  --ff-heading: "Adineue PRO Bold", "Segoe UI", sans-serif;
+  --ff-body: "Adineue PRO", "Segoe UI", sans-serif;
+  --ff-light: "Adineue PRO Light", "Segoe UI", sans-serif;
+
+  /* Font-Size */
+  --fs-header: 3rem; /* 48px */
+  --fs-subheader: 2.5rem; /* 40px */
+  --fs-title: 2rem; /* 32px */
+  --fs-productName: 1.75rem; /* 28px */
+  --fs-subtitle: 1.25rem; /* 20px */
+
+  --fs-large-btn: 1.25rem; /* 20px */
+  --fs-small-btn: 0.75rem; /*12px */
+
+  --fs-nav: 1.25rem; /* 20px */
+  --fs-footer: 1rem; /* 16px */
+
+  --fs-body: 1rem; /* 16px */
+
+  /* Colors */
+  /* Neutral colors */
+  --clr-neutral-900: #29282d; /* #29282D */
+  --clr-neutral-850: #2e2e30; /* #2E2E30 */
+  --clr-neutral-800: #333235; /* #333235 */
+  --clr-neutral-750: #333335; /* #333335 */
+  --clr-neutral-700: #3d3d3f; /* #3D3D3F */
+  --clr-neutral-600: #4e4e50; /* #4E4E50 */
+  --clr-neutral-500: #595959; /* #595959 */
+  --clr-neutral-400: #626168; /* #626168 */
+  --clr-neutral-300: #909090; /* #909090 */
+  --clr-neutral-100: #ffffff; /* #FFFFFF */
+
+  /* Gradient colors */
+  --clr-gradient-clr-left: #ff626d; /* #FF626D */
+  --clr-gradient-clr-right: #fcad72; /* #FCAD72 */
+  --clr-bg-gradient: linear-gradient(
+    90deg,
+    var(--clr-gradient-clr-left) 0%,
+    var(--clr-gradient-clr-right) 100%
+  );
+}

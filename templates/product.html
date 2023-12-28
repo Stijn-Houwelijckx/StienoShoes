@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="CSS/normalize.css" />
     <link rel="stylesheet" href="CSS/style.css" />
 
+    <script src="Javascript/main.js" defer></script>
+
     <title>Stieno Shoes</title>
   </head>
   <body>
@@ -16,8 +18,18 @@
           ><img src="assets/logo/Logo.svg" alt="Logo"
         /></a>
 
-        <nav>
-          <ul class="primary-navigation">
+        <nav
+          id="primary-navigation"
+          data-visible="false"
+          class="primary-navigation"
+        >
+          <img
+            src="assets/icons/Icon_Close.svg"
+            class="close-btn"
+            alt="Close"
+          />
+
+          <ul class="primary-nav-list">
             <li class="nav-link"><a href="index.html">Home</a></li>
             <li class="nav-link"><a href="catalog.html">Catalog</a></li>
             <li class="nav-link"><a href="#">About Us</a></li>
@@ -25,10 +37,10 @@
         </nav>
 
         <div class="nav-icon-container">
-          <a href="#">
+          <a href="#" class="search-icon">
             <img src="assets/icons/Icon_Search.svg" alt="Search" />
           </a>
-          <a href="shoppingCart.html">
+          <a href="shoppingCart.html" class="shoppingCart-icon">
             <img src="assets/icons/Icon_Shoppingcart.svg" alt="Shopping Cart" />
           </a>
           <a href="#" class="mobile-burger">

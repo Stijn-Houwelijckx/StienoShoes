@@ -44,6 +44,12 @@
     var(--clr-gradient-clr-left) 0%,
     var(--clr-gradient-clr-right) 100%
   );
+
+  --clr-neutralBg-gradient: linear-gradient(
+    90deg,
+    hsla(0, 0%, 100%, 0) 0%,
+    hsl(0, 0%, 100%) 100%
+  );
 }
 
 /* ======================================================================== 
@@ -543,6 +549,60 @@ p {
 }
 
 /* End About Section */
+
+/* ======================================================================== 
+||                      Catalog Banner Section                           ||
+||                      ----------------------                           ||
+||                                                                       ||
+||                                                                       ||
+======================================================================== */
+
+.catalog-banner-section {
+  background: url("../assets/humans/RunningWoman.png"),
+    var(--clr-neutralBg-gradient);
+
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: calc(100% + 90px), 0;
+
+  height: 393px;
+
+  display: flex;
+  align-items: center;
+}
+
+.catalog-banner-section .title-container {
+  padding-left: 16px;
+}
+
+.catalog-banner-section .title {
+  margin-top: 0;
+
+  font-size: var(--fs-header);
+}
+
+.catalog-banner-section .popular-card {
+  display: none;
+}
+
+/* End Catalog Banner Section */
+
+/* ======================================================================== 
+||                          Catalog Section                              ||
+||                          ---------------                              ||
+||                                                                       ||
+||                                                                       ||
+======================================================================== */
+
+/* Begin Catalog Filter */
+
+.catalog-section-container .filter-container {
+  display: none;
+}
+
+/* End Catalog Filter */
+
+/* End Catalog Section */
 
 /* ======================================================================== 
 ||                               Footer                                  ||

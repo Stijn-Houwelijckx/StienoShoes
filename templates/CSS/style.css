@@ -105,6 +105,16 @@ body {
   overflow-x: hidden;
 }
 
+button {
+  background-color: transparent;
+  color: white;
+  font-family: var(--ff-regular);
+  font-size: var(--fs-large-btn);
+  border: none;
+
+  text-transform: uppercase;
+}
+
 a {
   text-decoration: none;
   display: inline-block;
@@ -1073,11 +1083,99 @@ p {
 
 .description-section .wrapper {
   padding: 40px 16px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 40px;
 }
 
 .description-section .title,
 .description-section .subtitle {
   display: none;
+}
+
+.description-section .description-info-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.description-section .description-info-container .sizes-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.description-section .sizes-container .size-container-label {
+  text-transform: uppercase;
+  font-family: var(--ff-light);
+  color: var(--clr-neutral-300);
+}
+
+.description-section .input-container {
+  position: relative;
+}
+
+.description-section .sizes-container .size-boxes-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+
+  width: fit-content;
+}
+
+.description-section .input-container input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+
+  /* height: 100%;
+  width: 100%; */
+
+  height: 40px;
+  width: 40px;
+}
+
+.description-section .input-container .size-number {
+  background-color: var(--clr-neutral-400);
+  font-family: var(--ff-regular);
+}
+
+.description-section .add-cart-btn {
+  background: var(--clr-bg-gradient);
+
+  /* display: flex; */
+
+  width: 100%;
+
+  padding: 12px 24px;
+
+  border-radius: 360px;
+}
+
+.description-section .characteristics-container {
+  display: flex;
+  flex-direction: column;
+
+  gap: 16px;
+}
+
+.description-section .characteristics-container .subtitle {
+  display: block;
+
+  text-transform: uppercase;
+}
+
+.characteristics-container .characteristic {
+  display: flex;
+  gap: 16px;
+}
+
+.characteristics-container .characteristic .label {
+  display: block;
+  color: var(--clr-neutral-300);
 }
 
 /* End Description Section */

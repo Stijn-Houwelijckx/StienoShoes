@@ -133,6 +133,8 @@ a {
   font-family: var(--ff-bold);
   font-size: var(--fs-nav);
   color: var(--clr-neutral-100);
+
+  letter-spacing: 1px;
 }
 
 .primary-nav-list,
@@ -144,12 +146,16 @@ a {
 .number,
 .product-title {
   font-family: var(--ff-bold);
+
+  letter-spacing: 1px;
 }
 
 .text,
 p {
   font-family: var(--ff-regular);
   font-size: var(--fs-body);
+
+  letter-spacing: 0.5px;
 }
 
 .primary-btn {
@@ -161,6 +167,7 @@ p {
   color: var(--clr-neutral-100);
 
   border-radius: 360px;
+  letter-spacing: 1px;
 }
 
 .small-btn {
@@ -172,6 +179,7 @@ p {
   color: var(--clr-neutral-100);
 
   border-radius: 360px;
+  letter-spacing: 0.5px;
 }
 
 /* End Typography */
@@ -1053,6 +1061,26 @@ p {
 }
 
 /* End Product Section */
+
+/* ======================================================================== 
+||                         Description Section                           ||
+||                         -------------------                           ||
+||                                                                       ||
+||                                                                       ||
+======================================================================== */
+
+/* Begin Description Section */
+
+.description-section .wrapper {
+  padding: 40px 16px;
+}
+
+.description-section .title,
+.description-section .subtitle {
+  display: none;
+}
+
+/* End Description Section */
 
 /* ======================================================================== 
 ||                               Footer                                  ||

@@ -92,6 +92,7 @@ h4,
 h5,
 h6 {
   font-size: 1em;
+  margin: 0;
 }
 
 body {
@@ -594,8 +595,6 @@ p {
 }
 
 .catalog-banner-section .title {
-  margin-top: 0;
-
   font-size: var(--fs-header);
 }
 
@@ -944,6 +943,116 @@ p {
 }
 
 /* End Catalog Section */
+
+/* ======================================================================== 
+||                          Product Section                              ||
+||                          ---------------                              ||
+||                                                                       ||
+||                                                                       ||
+======================================================================== */
+
+/* Begin Product Section */
+
+.product-section {
+  height: calc(400px);
+
+  background: url("../assets/background/Product_Background.svg");
+  background-size: cover cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.product-section .wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  padding: 0 16px;
+  padding-top: 20px;
+
+  gap: 20px;
+}
+
+.product-section .product-info .sizes-container,
+.product-section .product-info .size-container-label,
+.product-section .product-info .button-price-container button {
+  display: none;
+}
+
+.product-section .back-btn {
+  font-family: var(--ff-regular);
+  color: var(--clr-neutral-100);
+
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
+  width: fit-content;
+}
+
+.product-section .product-container {
+  position: relative;
+
+  height: 100%;
+
+  z-index: 0;
+}
+
+.product-section .product-container .product-image {
+  position: absolute;
+
+  top: calc(50% - 48px);
+  right: -60px;
+  transform: translateY(-50%);
+
+  z-index: -1;
+}
+
+.product-section .product-container .product-image::after {
+  content: "";
+  position: absolute;
+
+  height: 120%;
+  aspect-ratio: 1;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-52%, -40%);
+
+  z-index: -1;
+
+  border-radius: 360px;
+
+  background-color: var(--clr-neutral-800);
+}
+
+.product-section .product-image img {
+  max-width: 680px;
+  width: 90%;
+}
+
+.product-section .product-info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.product-section .product-info .name {
+  font-family: var(--ff-bold);
+  font-size: var(--fs-productName);
+}
+
+.product-section .product-info .color {
+  font-family: var(--ff-light);
+  font-size: var(--fs-subtitle);
+}
+
+.product-section .product-info .price {
+  font-family: var(--ff-bold);
+  font-size: var(--fs-title);
+}
+
+/* End Product Section */
 
 /* ======================================================================== 
 ||                               Footer                                  ||

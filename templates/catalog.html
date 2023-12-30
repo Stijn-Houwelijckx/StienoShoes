@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="CSS/style.css" />
 
     <script src="Javascript/main.js" defer></script>
+    <script src="Javascript/catalog.js" defer></script>
 
     <title>Stieno Shoes</title>
   </head>
@@ -63,56 +64,214 @@
     </section>
 
     <div class="catalog-section-container">
-      <aside class="filter-container">
-        <div class="wrapper"><h2 class="title">Filter.</h2></div>
+      <aside class="filter-container" data-visible="false">
+        <div class="title-container">
+          <h2 class="title">Filter.</h2>
+          <img src="assets/icons/Icon_ChevronRight.svg" alt="close" />
+        </div>
 
         <div class="wrapper gender-filter-container">
           <form action="#" method="post" class="gender-filter-form">
-            <label for="male-shoes">Men's shoes</label>
-            <input type="checkbox" name="male-shoes" id="male-shoes" />
+            <!-- <div class="input-container">
+              <label for="male-shoes">Men's shoes</label>
+              <input type="checkbox" name="male-shoes" id="male-shoes" />
+            </div> -->
 
-            <label for="female-shoes">Women's shoes</label>
-            <input type="checkbox" name="female-shoes" id="female-shoes" />
+            <label for="male-shoes" class="input-container">
+              Men's shoes
+              <input type="checkbox" name="male-shoes" id="male-shoes" />
+              <span class="checkmark">
+                <img src="assets/icons/Icon_Checkmark.svg" alt="Checkmark" />
+              </span>
+            </label>
 
-            <label for="childeren-shoes">Childeren's shoes</label>
+            <!-- <div class="input-container">
+              <label for="female-shoes">Women's shoes</label>
+              <input type="checkbox" name="female-shoes" id="female-shoes" />
+            </div> -->
+
+            <label for="female-shoes" class="input-container">
+              Women's shoes
+              <input type="checkbox" name="female-shoes" id="female-shoes" />
+              <span class="checkmark">
+                <img src="assets/icons/Icon_Checkmark.svg" alt="Checkmark" />
+              </span>
+            </label>
+
+            <!-- <div class="input-container">
+              <label for="childeren-shoes">Childeren's shoes</label>
+              <input
+                type="checkbox"
+                name="childeren-shoes"
+                id="childeren-shoes"
+              />
+            </div> -->
+
+            <label for="childeren-shoes" class="input-container">
+              Childeren's shoes
+              <input
+                type="checkbox"
+                name="childeren-shoes"
+                id="childeren-shoes"
+              />
+              <span class="checkmark">
+                <img src="assets/icons/Icon_Checkmark.svg" alt="Checkmark" />
+              </span>
+            </label>
+          </form>
+        </div>
+
+        <hr />
+
+        <div class="wrapper type-filter-container">
+          <form action="#" method="post" class="type-filter-form">
+            <!-- <div class="input-container">
+              <input type="checkbox" name="casual-shoes" id="casual-shoes" />
+              <label for="casual-shoes">Casual shoes</label>
+            </div> -->
+
+            <label for="casual-shoes" class="input-container">
+              Casual shoes
+              <input type="checkbox" name="casual-shoes" id="casual-shoes" />
+              <span class="checkmark">
+                <img src="assets/icons/Icon_Checkmark.svg" alt="Checkmark" />
+              </span>
+            </label>
+
+            <!-- <div class="input-container">
+              <label for="outdoor-shoes">Outdoor shoes</label>
+              <input type="checkbox" name="outdoor-shoes" id="outdoor-shoes" />
+            </div> -->
+
+            <label for="outdoor-shoes" class="input-container">
+              Outdoor shoes
+              <input type="checkbox" name="outdoor-shoes" id="outdoor-shoes" />
+              <span class="checkmark">
+                <img src="assets/icons/Icon_Checkmark.svg" alt="Checkmark" />
+              </span>
+            </label>
+
+            <!-- <div class="input-container">
+              <label for="classic-shoes">Classic shoes</label>
+              <input type="checkbox" name="classic-shoes" id="classic-shoes" />
+            </div> -->
+
+            <label for="classic-shoes" class="input-container">
+              Classic shoes
+              <input type="checkbox" name="classic-shoes" id="classic-shoes" />
+              <span class="checkmark">
+                <img src="assets/icons/Icon_Checkmark.svg" alt="Checkmark" />
+              </span>
+            </label>
+
+            <!-- <div class="input-container">
+              <label for="sport-shoes">Sport shoes</label>
+              <input type="checkbox" name="sport-shoes" id="sport-shoes" />
+            </div> -->
+
+            <label for="sport-shoes" class="input-container">
+              Sport shoes
+              <input type="checkbox" name="sport-shoes" id="sport-shoes" />
+              <span class="checkmark">
+                <img src="assets/icons/Icon_Checkmark.svg" alt="Checkmark" />
+              </span>
+            </label>
+          </form>
+        </div>
+
+        <div class="price-filter-container">
+          <div class="filter-title-container">
+            <p class="filter-title">Pricing</p>
+          </div>
+
+          <form action="#" method="post" class="price-filter-form">
+            <input type="text" name="min-price" id="min-price" value="€ 0" />
             <input
-              type="checkbox"
-              name="childeren-shoes"
-              id="childeren-shoes"
+              type="text"
+              name="max-price"
+              id="max-price"
+              value="€ 100.00"
             />
           </form>
         </div>
 
-        <div class="wrapper type-filter-container">
-          <form action="#" method="post" class="type-filter-form">
-            <label for="casual-shoes">Casual shoes</label>
-            <input type="checkbox" name="casual-shoes" id="casual-shoes" />
-
-            <label for="outdoor-shoes">Outdoor shoes</label>
-            <input type="checkbox" name="outdoor-shoes" id="outdoor-shoes" />
-
-            <label for="classic-shoes">Classic shoes</label>
-            <input type="checkbox" name="classic-shoes" id="classic-shoes" />
-
-            <label for="sport-shoes">Sport shoes</label>
-            <input type="checkbox" name="sport-shoes" id="sport-shoes" />
-          </form>
-        </div>
-
-        <div class="wrapper price-filter-container">
-          <p class="filter-title">Pricing</p>
-
-          <form action="#" method="post" class="price-filter-form">
-            <input type="text" name="min-price" id="min-price" />
-            <input type="text" name="max-price" id="max-price" />
-          </form>
-        </div>
-
         <div class="wrapper color-filter-container">
-          <p class="filter-title">Colors</p>
+          <div class="filter-title-container">
+            <p class="filter-title">Colors</p>
+          </div>
 
           <div class="color-boxes-container">
-            <div class="color-box">
+            <label for="shoe-color1" class="input-container">
+              <input type="checkbox" name="shoe-color1" id="shoe-color1" />
+              <span class="checkmark" style="background-color: #ffffff">
+                <img src="assets/icons/Icon_Checkmark.svg" alt="Checkmark" />
+              </span>
+            </label>
+
+            <label for="shoe-color2" class="input-container">
+              <input type="checkbox" name="shoe-color2" id="shoe-color2" />
+              <span class="checkmark" style="background-color: #000000">
+                <img src="assets/icons/Icon_Checkmark.svg" alt="Checkmark" />
+              </span>
+            </label>
+
+            <label for="shoe-color3" class="input-container">
+              <input type="checkbox" name="shoe-color3" id="shoe-color3" />
+              <span class="checkmark" style="background-color: #98a398">
+                <img src="assets/icons/Icon_Checkmark.svg" alt="Checkmark" />
+              </span>
+            </label>
+
+            <label for="shoe-color4" class="input-container">
+              <input type="checkbox" name="shoe-color4" id="shoe-color4" />
+              <span class="checkmark" style="background-color: #c89b3b">
+                <img src="assets/icons/Icon_Checkmark.svg" alt="Checkmark" />
+              </span>
+            </label>
+
+            <label for="shoe-color5" class="input-container">
+              <input type="checkbox" name="shoe-color5" id="shoe-color5" />
+              <span class="checkmark" style="background-color: #ae5e05">
+                <img src="assets/icons/Icon_Checkmark.svg" alt="Checkmark" />
+              </span>
+            </label>
+
+            <label for="shoe-color6" class="input-container">
+              <input type="checkbox" name="shoe-color6" id="shoe-color6" />
+              <span class="checkmark" style="background-color: #a40b19">
+                <img src="assets/icons/Icon_Checkmark.svg" alt="Checkmark" />
+              </span>
+            </label>
+
+            <label for="shoe-color7" class="input-container">
+              <input type="checkbox" name="shoe-color7" id="shoe-color7" />
+              <span class="checkmark" style="background-color: #5c1d68">
+                <img src="assets/icons/Icon_Checkmark.svg" alt="Checkmark" />
+              </span>
+            </label>
+
+            <label for="shoe-color8" class="input-container">
+              <input type="checkbox" name="shoe-color8" id="shoe-color8" />
+              <span class="checkmark" style="background-color: #4c6aaa">
+                <img src="assets/icons/Icon_Checkmark.svg" alt="Checkmark" />
+              </span>
+            </label>
+
+            <label for="shoe-color9" class="input-container">
+              <input type="checkbox" name="shoe-color9" id="shoe-color9" />
+              <span class="checkmark" style="background-color: #d0e75d">
+                <img src="assets/icons/Icon_Checkmark.svg" alt="Checkmark" />
+              </span>
+            </label>
+
+            <label for="shoe-color10" class="input-container">
+              <input type="checkbox" name="shoe-color10" id="shoe-color10" />
+              <span class="checkmark" style="background-color: #133171">
+                <img src="assets/icons/Icon_Checkmark.svg" alt="Checkmark" />
+              </span>
+            </label>
+
+            <!-- <div class="color-box">
               <img src="assets/icons/Icon_Checkmark.svg" alt="Checkmark" />
             </div>
             <div class="color-box">
@@ -141,15 +300,274 @@
             </div>
             <div class="color-box">
               <img src="assets/icons/Icon_Checkmark.svg" alt="Checkmark" />
-            </div>
+            </div> -->
           </div>
         </div>
 
+        <hr />
+
         <div class="wrapper size-filter-container">
-          <p class="filter-title">Size</p>
+          <div class="filter-title-container">
+            <p class="filter-title">Size</p>
+          </div>
 
           <div class="size-boxes-container">
-            <div class="size-box">
+            <!-- <label for="shoe-size1" class="input-container">
+              <input type="checkbox" name="shoe-size1" id="shoe-size1" />
+              <span class="size-number"> 4 </span>
+            </label> -->
+
+            <label for="shoe-size1" class="input-container">
+              <input
+                type="checkbox"
+                name="shoe-size1"
+                id="shoe-size1"
+                class="shoe-size"
+              />
+              <span class="size-number">4</span>
+            </label>
+
+            <label for="shoe-size2" class="input-container">
+              <input
+                type="checkbox"
+                name="shoe-size2"
+                id="shoe-size2"
+                class="shoe-size"
+              />
+              <span class="size-number">4.5</span>
+            </label>
+
+            <label for="shoe-size3" class="input-container">
+              <input
+                type="checkbox"
+                name="shoe-size3"
+                id="shoe-size3"
+                class="shoe-size"
+              />
+              <span class="size-number">5</span>
+            </label>
+
+            <label for="shoe-size4" class="input-container">
+              <input
+                type="checkbox"
+                name="shoe-size4"
+                id="shoe-size4"
+                class="shoe-size"
+              />
+              <span class="size-number">5.5</span>
+            </label>
+
+            <label for="shoe-size5" class="input-container">
+              <input
+                type="checkbox"
+                name="shoe-size5"
+                id="shoe-size5"
+                class="shoe-size"
+              />
+              <span class="size-number">6</span>
+            </label>
+
+            <label for="shoe-size6" class="input-container">
+              <input
+                type="checkbox"
+                name="shoe-size6"
+                id="shoe-size6"
+                class="shoe-size"
+              />
+              <span class="size-number">6.5</span>
+            </label>
+
+            <label for="shoe-size7" class="input-container">
+              <input
+                type="checkbox"
+                name="shoe-size7"
+                id="shoe-size7"
+                class="shoe-size"
+              />
+              <span class="size-number">7</span>
+            </label>
+
+            <label for="shoe-size8" class="input-container">
+              <input
+                type="checkbox"
+                name="shoe-size8"
+                id="shoe-size8"
+                class="shoe-size"
+              />
+              <span class="size-number">7.5</span>
+            </label>
+
+            <label for="shoe-size9" class="input-container">
+              <input
+                type="checkbox"
+                name="shoe-size9"
+                id="shoe-size9"
+                class="shoe-size"
+              />
+              <span class="size-number">8</span>
+            </label>
+
+            <label for="shoe-size10" class="input-container">
+              <input
+                type="checkbox"
+                name="shoe-size10"
+                id="shoe-size10"
+                class="shoe-size"
+              />
+              <span class="size-number">8.5</span>
+            </label>
+
+            <label for="shoe-size11" class="input-container">
+              <input
+                type="checkbox"
+                name="shoe-size11"
+                id="shoe-size11"
+                class="shoe-size"
+              />
+              <span class="size-number">9</span>
+            </label>
+
+            <label for="shoe-size12" class="input-container">
+              <input
+                type="checkbox"
+                name="shoe-size12"
+                id="shoe-size12"
+                class="shoe-size"
+              />
+              <span class="size-number">9.5</span>
+            </label>
+
+            <label for="shoe-size13" class="input-container">
+              <input
+                type="checkbox"
+                name="shoe-size13"
+                id="shoe-size13"
+                class="shoe-size"
+              />
+              <span class="size-number">10</span>
+            </label>
+
+            <label for="shoe-size14" class="input-container">
+              <input
+                type="checkbox"
+                name="shoe-size14"
+                id="shoe-size14"
+                class="shoe-size"
+              />
+              <span class="size-number">10.5</span>
+            </label>
+
+            <label for="shoe-size15" class="input-container">
+              <input
+                type="checkbox"
+                name="shoe-size15"
+                id="shoe-size15"
+                class="shoe-size"
+              />
+              <span class="size-number">11</span>
+            </label>
+
+            <label for="shoe-size16" class="input-container">
+              <input
+                type="checkbox"
+                name="shoe-size16"
+                id="shoe-size16"
+                class="shoe-size"
+              />
+              <span class="size-number">11.5</span>
+            </label>
+
+            <label for="shoe-size17" class="input-container">
+              <input
+                type="checkbox"
+                name="shoe-size17"
+                id="shoe-size17"
+                class="shoe-size"
+              />
+              <span class="size-number">12</span>
+            </label>
+
+            <label for="shoe-size18" class="input-container">
+              <input
+                type="checkbox"
+                name="shoe-size18"
+                id="shoe-size18"
+                class="shoe-size"
+              />
+              <span class="size-number">12.5</span>
+            </label>
+
+            <label for="shoe-size19" class="input-container">
+              <input
+                type="checkbox"
+                name="shoe-size19"
+                id="shoe-size19"
+                class="shoe-size"
+              />
+              <span class="size-number">13</span>
+            </label>
+
+            <label for="shoe-size20" class="input-container">
+              <input
+                type="checkbox"
+                name="shoe-size20"
+                id="shoe-size20"
+                class="shoe-size"
+              />
+              <span class="size-number">13.5</span>
+            </label>
+
+            <label for="shoe-size21" class="input-container">
+              <input
+                type="checkbox"
+                name="shoe-size21"
+                id="shoe-size21"
+                class="shoe-size"
+              />
+              <span class="size-number">14</span>
+            </label>
+
+            <label for="shoe-size22" class="input-container">
+              <input
+                type="checkbox"
+                name="shoe-size22"
+                id="shoe-size22"
+                class="shoe-size"
+              />
+              <span class="size-number">14.5</span>
+            </label>
+
+            <label for="shoe-size23" class="input-container">
+              <input
+                type="checkbox"
+                name="shoe-size23"
+                id="shoe-size23"
+                class="shoe-size"
+              />
+              <span class="size-number">15</span>
+            </label>
+
+            <label for="shoe-size24" class="input-container">
+              <input
+                type="checkbox"
+                name="shoe-size24"
+                id="shoe-size24"
+                class="shoe-size"
+              />
+              <span class="size-number">15.5</span>
+            </label>
+
+            <label for="shoe-size25" class="input-container">
+              <input
+                type="checkbox"
+                name="shoe-size25"
+                id="shoe-size25"
+                class="shoe-size"
+              />
+              <span class="size-number">16</span>
+            </label>
+
+            <!-- <div class="size-box">
               <p>4</p>
             </div>
             <div class="size-box">
@@ -223,7 +641,7 @@
             </div>
             <div class="size-box">
               <p>16</p>
-            </div>
+            </div> -->
           </div>
         </div>
       </aside>

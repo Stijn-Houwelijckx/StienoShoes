@@ -1181,6 +1181,120 @@ p {
 /* End Description Section */
 
 /* ======================================================================== 
+||                              Cart Section                             ||
+||                              ------------                             ||
+||                                                                       ||
+||                                                                       ||
+======================================================================== */
+
+/* Begin Cart Section */
+
+.cart-section .wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  padding: 0 16px;
+  padding-top: 20px;
+  padding-bottom: 40px;
+
+  gap: 32px;
+}
+
+.cart-section .title-container {
+  display: flex;
+  flex-direction: column;
+
+  gap: 4px;
+}
+
+.cart-section .back-btn {
+  font-family: var(--ff-regular);
+  color: var(--clr-neutral-100);
+
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
+  width: fit-content;
+}
+
+.cart-section .title {
+  font-size: var(--fs-title);
+}
+
+.cart-section .cart-items-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.cart-section .cart-item {
+  background-color: var(--clr-neutral-750);
+  border-radius: 16px;
+  padding: 12px 20px 12px 4px;
+}
+
+.cart-section .cart-item .delete-btn,
+.cart-section .item-info .price,
+.cart-section .cart-item .size,
+.cart-section .cart-item .color {
+  display: none;
+}
+
+.cart-section .item-name-size .price {
+  display: block;
+}
+
+.cart-section .cart-item-content {
+  display: flex;
+}
+
+.cart-section .cart-item-content .item-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+
+  text-transform: uppercase;
+}
+
+.cart-section .cart-item-content .item-image {
+  width: 120px;
+  height: 100%;
+}
+
+.cart-section .item-info .price .label {
+  color: var(--clr-neutral-300);
+}
+
+.cart-section .item-info .item-count {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.cart-section .item-info .item-count button {
+  background-color: var(--clr-neutral-600);
+  border-radius: 360px;
+}
+
+.cart-section .cart-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cart-section .subtotal .label {
+  text-transform: uppercase;
+  font-family: var(--ff-bold);
+}
+
+/* End Cart Section */
+
+/* ======================================================================== 
 ||                               Footer                                  ||
 ||                              --------                                 ||
 ||                                                                       ||

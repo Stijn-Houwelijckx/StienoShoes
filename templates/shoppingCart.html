@@ -216,50 +216,86 @@
 
     <aside class="payment-section">
       <div class="wrapper">
-        <h2 class="title">Card detail.</h2>
+        <div class="title-container">
+          <h2 class="title">Card detail.</h2>
 
-        <p class="select-text">Select card type</p>
+          <p class="select-text">Select card type</p>
 
-        <div class="payment-options">
-          <button class="payment-option-btn">
-            <img src="assets/icons/Icon_Logo_Visa.svg" alt="Visa" />
-          </button>
-          <button class="payment-option-btn">
-            <img src="assets/icons/Icon_Logo_PayPal.svg" alt="PayPal" />
-          </button>
-          <button class="payment-option-btn">
-            <img src="assets/icons/Icon_Logo_Mastercard.svg" alt="Mastercard" />
-          </button>
+          <div class="payment-options">
+            <button class="payment-option-btn">
+              <img src="assets/icons/Icon_Logo_Visa.svg" alt="Visa" />
+            </button>
+            <button class="payment-option-btn">
+              <img src="assets/icons/Icon_Logo_PayPal.svg" alt="PayPal" />
+            </button>
+            <button class="payment-option-btn">
+              <img
+                src="assets/icons/Icon_Logo_Mastercard.svg"
+                alt="Mastercard"
+              />
+            </button>
+          </div>
         </div>
 
         <form action="#" method="post">
-          <label for="card-number">card number</label>
-          <input
-            type="text"
-            name="card-number"
-            id="card-number"
-            placeholder="card number"
-          />
+          <!-- <div class="card-number-container">
+            <label for="card-number">card number</label>
+            <input
+              type="text"
+              name="card-number"
+              id="card-number"
+              placeholder="card number"
+            />
+          </div> -->
+
+          <div class="form-input card-number-container">
+            <input
+              type="text"
+              class="input-field"
+              placeholder="card number"
+              name="card-number"
+              id="card-number"
+              required
+            />
+            <label for="card-number" class="input-label">card number</label>
+          </div>
 
           <div class="card-bottom-info">
-            <label for="card-expiry">expiry date</label>
-            <input type="date" name="card-expiry" id="card-expiry" />
+            <div class="form-input card-expiry-container">
+              <input
+                type="text"
+                class="input-field"
+                placeholder="card expiry"
+                name="card-expiry"
+                id="card-expiry"
+                required
+              />
+              <label for="card-expiry" class="input-label">card expiry</label>
+            </div>
 
-            <label for="cvv">CVV</label>
-            <input type="text" name="cvv" id="cvv" placeholder="CVV" />
+            <div class="form-input card-CVV-container">
+              <input
+                type="text"
+                class="input-field"
+                placeholder="CVV"
+                name="card-CVV"
+                id="card-CVV"
+                required
+              />
+              <label for="card-CVV" class="input-label">CVV</label>
+            </div>
           </div>
 
           <button type="submit" class="checkout-btn">Checkout</button>
         </form>
-
-        <div class="disclaimer-container">
-          <p class="disclaimer">
-            We carefully pack and deliver your shoes with utmost care, ensuring
-            they arrive at your doorstep in perfect condition. Unbox happiness
-            as you receive your new pair, thoughtfully delivered to you with
-            precision and care.
-          </p>
-        </div>
+      </div>
+      <div class="disclaimer-container">
+        <p class="disclaimer">
+          We carefully pack and deliver your shoes with utmost care, ensuring
+          they arrive at your doorstep in perfect condition. Unbox happiness as
+          you receive your new pair, thoughtfully delivered to you with
+          precision and care.
+        </p>
       </div>
     </aside>
 

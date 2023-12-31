@@ -21,6 +21,7 @@
   --fs-nav: 1.25rem; /* 20px */
   --fs-footer: 1rem; /* 16px */
 
+  --fs-input: 1.25rem; /* 20px */
   --fs-body: 1rem; /* 16px */
 
   /* Colors */
@@ -49,6 +50,12 @@
 
   --clr-bg-gradient-rotated: linear-gradient(
     90deg,
+    var(--clr-gradient-clr-right) 0%,
+    var(--clr-gradient-clr-left) 100%
+  );
+
+  --clr-bg-gradient-vertical: linear-gradient(
+    180deg,
     var(--clr-gradient-clr-right) 0%,
     var(--clr-gradient-clr-left) 100%
   );
@@ -1293,6 +1300,148 @@ p {
 }
 
 /* End Cart Section */
+
+/* ======================================================================== 
+||                           Payment Section                             ||
+||                           ---------------                             ||
+||                                                                       ||
+||                                                                       ||
+======================================================================== */
+
+/* Begin Payment Section */
+
+.payment-section {
+  background: var(--clr-bg-gradient-vertical);
+}
+
+.payment-section .wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  padding: 0 16px;
+  padding-top: 20px;
+  padding-bottom: 40px;
+
+  gap: 60px;
+}
+
+.payment-section .title-container {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.payment-section .title-container .payment-options {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+}
+
+.payment-section .title-container .title {
+  font-size: var(--fs-subheader);
+}
+
+.payment-section .title-container .select-text {
+  font-size: var(--fs-subtitle);
+  text-transform: uppercase;
+}
+
+.payment-section form {
+  display: flex;
+  flex-direction: column;
+
+  gap: 40px;
+}
+
+.payment-section form button {
+  background-color: var(--clr-neutral-600);
+
+  width: 100%;
+
+  padding: 12px 24px;
+
+  margin-top: 20px;
+
+  border-radius: 360px;
+}
+
+.payment-section .disclaimer-container {
+  background-color: var(--clr-neutral-900);
+
+  padding: 40px 16px;
+
+  text-align: center;
+}
+
+/* Input fields */
+
+.payment-section .form-input {
+  position: relative;
+  padding: 15px 0 0;
+  margin-top: 10px;
+  /* width: 50%; */
+
+  font-family: var(--ff-regular);
+  color: var(--clr-neutral-100);
+}
+
+.payment-section .input-field {
+  font-family: inherit;
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid var(--clr-neutral-100);
+  outline: 0;
+  font-size: var(--fs-input);
+  color: var(--clr-neutral-100);
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+}
+.payment-section .input-field::placeholder {
+  color: transparent;
+}
+.payment-section .input-field:placeholder-shown ~ .input-label {
+  font-size: var(--fs-input);
+  cursor: text;
+  top: 20px;
+}
+
+.payment-section .input-label {
+  position: absolute;
+  top: 0;
+  left: 8px;
+  display: block;
+  transition: 0.2s;
+  font-size: var(--fs-body);
+  color: var(--clr-neutral-100);
+}
+
+.payment-section .input-field:focus {
+  padding-bottom: 6px;
+  font-weight: 700;
+  border-width: 3px;
+}
+.payment-section .input-field:focus ~ .input-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: var(--fs-body);
+  color: var(--clr-neutral-100);
+}
+
+.payment-section .card-bottom-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.payment-section .card-bottom-info .form-input {
+  width: 40%;
+}
+
+/* End Payment Section */
 
 /* ======================================================================== 
 ||                               Footer                                  ||

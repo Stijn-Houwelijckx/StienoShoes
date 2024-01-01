@@ -24,12 +24,20 @@ advantageCardHandle.forEach((item) => {
 
 //===== Begin Popular Carousel =====//
 
-const prevBtn = document.querySelector(
+const prevBtn1 = document.querySelector(
   ".popular-section .carousel-control .prev-btn"
 );
-const nextBtn = document.querySelector(
+const nextBtn1 = document.querySelector(
   ".popular-section .carousel-control .next-btn"
 );
+
+const prevBtn2 = document.querySelector(
+  ".popular-section .popular-cards-container .prev-btn"
+);
+const nextBtn2 = document.querySelector(
+  ".popular-section .popular-cards-container .next-btn"
+);
+
 const slides = document.querySelectorAll(
   ".popular-section .popular-cards-container .card"
 );
@@ -40,10 +48,17 @@ const dots = document.querySelectorAll(
 let slideIndex = 2;
 showSlides(slideIndex);
 
-prevBtn.addEventListener("click", () => {
+prevBtn1.addEventListener("click", () => {
   plusSlides(-1);
 });
-nextBtn.addEventListener("click", () => {
+nextBtn1.addEventListener("click", () => {
+  plusSlides(1);
+});
+
+prevBtn2.addEventListener("click", () => {
+  plusSlides(-1);
+});
+nextBtn2.addEventListener("click", () => {
   plusSlides(1);
 });
 

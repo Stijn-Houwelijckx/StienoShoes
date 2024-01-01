@@ -21,6 +21,9 @@
   --fs-nav: 1.25rem; /* 20px */
   --fs-footer: 1rem; /* 16px */
 
+  --fs-card-title: 1.25rem; /* 20px */
+  --fs-card-price: 1rem; /* 16px */
+
   --fs-input: 1.25rem; /* 20px */
   --fs-body: 1rem; /* 16px */
 
@@ -65,6 +68,20 @@
     hsla(0, 0%, 100%, 0) 0%,
     hsl(0, 0%, 100%) 100%
   );
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  :root {
+    /* Font-Size */
+    --fs-header: 4.5rem; /* 72px */
+    --fs-title: 2.5rem; /* 40px */
+
+    --fs-small-btn: 1rem; /*16px */
+
+    --fs-card-title: 1.75rem; /* 28px */
+    --fs-card-price: 1.5rem; /* 24px */
+  }
 }
 
 /* ======================================================================== 
@@ -344,6 +361,17 @@ p {
   margin-top: 24px;
 }
 
+@media only screen and (min-width: 600px) {
+  .home-section .wrapper {
+    background-size: clamp(calc(300px - 32px), calc(90% - 32px), 700px);
+    padding: 0 32px;
+  }
+
+  .home-section .primary-btn {
+    width: fit-content;
+  }
+}
+
 /* End Home Section */
 
 /* ======================================================================== 
@@ -420,6 +448,16 @@ p {
   color: var(--clr-neutral-300);
 }
 
+@media only screen and (min-width: 600px) {
+  .advantage-section {
+    padding-top: 80px;
+  }
+
+  .advantage-section .wrapper {
+    padding: 0 32px;
+  }
+}
+
 /* End Advantage Section */
 
 /* ======================================================================== 
@@ -462,12 +500,13 @@ p {
 }
 
 .popular-section .card .title {
-  font-size: var(--fs-subtitle);
+  font-size: var(--fs-card-title);
 }
 
 .popular-cards-container {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 20px;
 }
 
@@ -481,6 +520,8 @@ p {
 
   min-height: 228px;
   min-width: 300px;
+  max-width: 450px;
+  width: 100%;
 
   padding: 16px 32px;
 
@@ -493,6 +534,7 @@ p {
 .popular-section .card .price {
   color: var(--clr-neutral-800);
   font-family: var(--ff-bold);
+  font-size: var(--fs-card-price);
 }
 
 .popular-section .card img {
@@ -500,7 +542,7 @@ p {
 
   width: 297px;
 
-  right: 0;
+  right: 0px;
   bottom: 0px;
 }
 
@@ -555,6 +597,38 @@ p {
     0px 0px 0px 7px var(--clr-neutral-100);
 }
 
+@media only screen and (min-width: 600px) {
+  .popular-section {
+    padding: 80px 0;
+  }
+
+  .popular-section .wrapper {
+    padding: 0 32px;
+  }
+
+  .popular-section .card {
+    height: 320px;
+    width: 504px;
+
+    max-width: 504;
+
+    padding: 28px 56px;
+  }
+
+  .popular-section .card img {
+    position: absolute;
+
+    width: 300px;
+
+    right: 40px;
+    bottom: 40px;
+  }
+
+  .popular-section::after {
+    height: 230px;
+  }
+}
+
 /* End Popular Section */
 
 /* ======================================================================== 
@@ -592,6 +666,16 @@ p {
   height: 250px;
 }
 
+@media only screen and (min-width: 600px) {
+  .about-section {
+    padding-top: 80px;
+  }
+
+  .about-section .wrapper {
+    padding: 0 32px;
+  }
+}
+
 /* End About Section */
 
 /* ======================================================================== 
@@ -606,7 +690,7 @@ p {
     var(--clr-neutralBg-gradient);
 
   background-repeat: no-repeat;
-  background-size: 75%, 100%;
+  background-size: 300px, 100%;
   background-position: calc(100% + 90px), 0;
 
   height: 393px;
@@ -625,6 +709,16 @@ p {
 
 .catalog-banner-section .popular-card {
   display: none;
+}
+
+@media only screen and (min-width: 600px) {
+  .catalog-banner-section .title-container {
+    padding-left: 32px;
+  }
+
+  .catalog-banner-section {
+    background-position: 100%, 0;
+  }
 }
 
 /* End Catalog Banner Section */
@@ -673,6 +767,8 @@ p {
 
   width: 100%;
   height: calc(100% - 70px);
+
+  max-width: 393px;
 
   z-index: 999;
 
@@ -965,6 +1061,12 @@ p {
   display: flex;
   flex-direction: column;
   gap: 8px;
+}
+
+@media only screen and (min-width: 600px) {
+  .catalog-section .sort-container {
+    padding: 80px 32px;
+  }
 }
 
 /* End Catalog Section */

@@ -1,6 +1,7 @@
 //===== Begin Filter Open =====//
 
 const filterContainer = document.querySelector(".filter-container");
+const overlayBG = document.querySelector(".overlay-background");
 const filterOpenBtn = document.querySelector(
   ".sort-container .title-container"
 );
@@ -13,8 +14,10 @@ filterOpenBtn.addEventListener("click", () => {
 
   if (visibility === "false") {
     filterContainer.setAttribute("data-visible", "true");
+    overlayBG.setAttribute("data-visible", "true");
   } else if (visibility === "true") {
     filterContainer.setAttribute("data-visible", "false");
+    overlayBG.setAttribute("data-visible", "false");
   }
 });
 
@@ -23,6 +26,7 @@ filterCloseBtn.addEventListener("click", () => {
 
   if (visibility === "true") {
     filterContainer.setAttribute("data-visible", "false");
+    overlayBG.setAttribute("data-visible", "false");
   }
 });
 

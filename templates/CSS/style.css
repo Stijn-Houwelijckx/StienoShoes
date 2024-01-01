@@ -1193,6 +1193,21 @@ p {
   }
 }
 
+@media only screen and (min-width: 768px) {
+  .catalog-section .catalog-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .catalog-section .catalog-item {
+    width: 50%;
+  }
+
+  .catalog-section .catalog-item:nth-child(even) .product-image-container {
+    background-color: var(--clr-neutral-750);
+  }
+}
+
 /* End Catalog Section */
 
 /* ======================================================================== 
@@ -1307,7 +1322,7 @@ p {
 
 @media only screen and (min-width: 600px) {
   .product-section {
-    height: 550px;
+    height: 590px;
 
     background: url("../assets/background/Product_Background.svg");
     background-size: cover cover;
@@ -1342,6 +1357,13 @@ p {
 ======================================================================== */
 
 /* Begin Description Section */
+
+.description-section {
+  border-radius: 40px;
+  background-color: var(--clr-neutral-700);
+
+  transform: translateY(-40px);
+}
 
 .description-section .wrapper {
   padding: 40px 16px;

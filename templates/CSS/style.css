@@ -408,6 +408,9 @@ p {
   justify-content: center;
 
   padding: 0 16px;
+
+  max-width: 1600px;
+  margin: auto;
 }
 
 .home-section .title {
@@ -466,6 +469,9 @@ p {
 
 .advantage-section .wrapper {
   padding: 0 16px;
+
+  max-width: 1600px;
+  margin: auto;
 }
 
 .advantage-section .title {
@@ -622,6 +628,9 @@ p {
   text-align: center;
 
   padding: 0 16px;
+
+  max-width: 1600px;
+  margin: auto;
 }
 
 .popular-section .title {
@@ -829,6 +838,9 @@ p {
 
 .about-section {
   padding-top: 40px;
+
+  max-width: 1600px;
+  margin: auto;
 }
 
 .about-section .wrapper {
@@ -1979,5 +1991,28 @@ footer hr {
 footer .footer-top .logo img {
   width: 220px;
   height: 50px;
+}
+
+@media only screen and (min-width: 1200px) {
+  footer .footer-top {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 40px;
+
+    padding: 0 109px;
+
+    height: fit-content;
+    width: 100%;
+
+    max-width: 1600px;
+    margin: auto;
+  }
+
+  footer .footer-top .logo {
+    height: fit-content;
+  }
 }
 /* End Footer */

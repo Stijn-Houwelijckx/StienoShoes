@@ -1,0 +1,15 @@
+defaultPlacement: end
+enableVersioning: true
+handle: demographicFilters
+name: 'demographic filters'
+propagationMethod: all
+siteSettings:
+  e79be201-6bfa-4c8d-82e2-cfb8455ee223: # StienoShoes
+    enabledByDefault: true
+    hasUrls: true
+    template: demographic-filters/_entry
+    uriFormat: 'demographic-filters/{slug}'
+structure:
+  maxLevels: null
+  uid: 946cca3d-e58f-4c43-9a3a-a1448f1fe142
+type: structure

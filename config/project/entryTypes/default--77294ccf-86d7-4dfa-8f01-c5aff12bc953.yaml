@@ -1,0 +1,203 @@
+fieldLayouts:
+  b8a11a5f-9895-4ffa-a409-7d83f81cd2c8:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: fe8b05cf-b5e9-415e-9cc9-ce7eba57bfdf
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 08fa0d50-043c-4943-9aea-1aee467873fc # product image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 55141582-39f4-4ba2-b38c-c01b76a3ab9f
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 0e105699-d704-4e98-80f4-46da67fcfc49 # product description
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b337b8fe-8953-4233-9098-1d0e5152d687
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: c2fab8bb-09ef-4560-9b6e-2df7fadbb5ea # colors
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 99426540-af20-41dd-8620-a347b4f497ae
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 69740f04-3884-498b-92e7-565da08487ab # sizes
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 7f3d3875-d164-478e-b03e-bcef5626d2c9
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 53a96423-2d94-44c3-839b-20edbbac6d6c # price
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 2f502da6-9871-4098-8db7-2cf3fe11873f
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: e98e436a-d171-473f-bd52-d64490487146 # full color
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 33348d23-fa42-4029-b523-e713aa84c0b0
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 57402bae-9be0-4a8e-9bd5-e288d98ce0b5 # brand
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 1759305f-2a71-42b8-a35f-eaebf61bc601
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: bce4b5f9-43f9-4bb1-aaf7-837f7dcb36ea # material
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a8f86a84-6b90-4906-aff0-669f36d903bc
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: f010c589-73fe-4e0a-ade9-3f8f5369e8a0 # details
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4b53d49b-543e-44f1-9902-69e6796a38d8
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 1a7e1c92-4bde-46db-bb2b-617e72bf0668 # code
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5cb07f80-c0c9-48fc-b019-d4c4cbc4e964
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 05d07e24-b3d3-404d-9a05-2cdf860ca856 # simplified color
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 0feea0a7-88a5-45cd-b967-7b299a50754b
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 907fd379-c870-4bf1-9c88-27763cd8af4f # demographics
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4c1b6f6a-2663-442d-880e-d1f36814ce97
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: b0540d42-ef59-4108-9258-97f810841c0d # types
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f7adaf91-31d8-41dc-acf3-46ba2d52f4fa
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 9c57fd25-e44f-4de1-8a9b-3181ebc73314
+        userCondition: null
+handle: default
+hasTitleField: true
+name: Default
+section: 45788909-f113-4bf9-b378-15a25d52cd7b # products
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+sortOrder: 1
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

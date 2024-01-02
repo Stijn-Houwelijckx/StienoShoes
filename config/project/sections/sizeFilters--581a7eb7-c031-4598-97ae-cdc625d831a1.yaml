@@ -1,0 +1,15 @@
+defaultPlacement: end
+enableVersioning: true
+handle: sizeFilters
+name: 'size filters'
+propagationMethod: all
+siteSettings:
+  e79be201-6bfa-4c8d-82e2-cfb8455ee223: # StienoShoes
+    enabledByDefault: true
+    hasUrls: true
+    template: size-filters/_entry
+    uriFormat: 'size-filters/{slug}'
+structure:
+  maxLevels: null
+  uid: 439485f8-68ba-4f41-a63f-06e6ed5020d3
+type: structure

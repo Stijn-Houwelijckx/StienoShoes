@@ -1,0 +1,15 @@
+defaultPlacement: end
+enableVersioning: true
+handle: colorFilters
+name: 'color filters'
+propagationMethod: all
+siteSettings:
+  e79be201-6bfa-4c8d-82e2-cfb8455ee223: # StienoShoes
+    enabledByDefault: true
+    hasUrls: true
+    template: color-filters/_entry
+    uriFormat: 'color-filters/{slug}'
+structure:
+  maxLevels: null
+  uid: bd911383-88f9-42aa-a909-55e81f15136d
+type: structure

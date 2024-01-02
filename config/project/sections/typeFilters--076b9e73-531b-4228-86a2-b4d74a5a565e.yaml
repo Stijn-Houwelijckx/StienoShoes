@@ -1,0 +1,15 @@
+defaultPlacement: end
+enableVersioning: true
+handle: typeFilters
+name: 'type filters'
+propagationMethod: all
+siteSettings:
+  e79be201-6bfa-4c8d-82e2-cfb8455ee223: # StienoShoes
+    enabledByDefault: true
+    hasUrls: true
+    template: type-filters/_entry
+    uriFormat: 'type-filters/{slug}'
+structure:
+  maxLevels: null
+  uid: 4f464f5b-5edd-45d5-9205-7a8b41e60015
+type: structure

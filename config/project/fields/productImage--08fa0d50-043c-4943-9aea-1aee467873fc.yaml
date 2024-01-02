@@ -1,0 +1,119 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 12a23e1e-d239-4fe3-a9d8-4dbdb167eaea # Common
+handle: productImage
+instructions: null
+name: 'product image'
+searchable: false
+settings:
+  allowSelfRelations: false
+  allowSubfolders: false
+  allowUploads: true
+  allowedKinds: null
+  branchLimit: null
+  defaultUploadLocationSource: 'volume:ae9e300f-dd91-4e79-a2ee-7d3dd6970d6a' # product assets
+  defaultUploadLocationSubpath: null
+  localizeRelations: false
+  maintainHierarchy: false
+  maxRelations: null
+  minRelations: null
+  previewMode: full
+  restrictFiles: false
+  restrictLocation: false
+  restrictedDefaultUploadSubpath: null
+  restrictedLocationSource: 'volume:ae9e300f-dd91-4e79-a2ee-7d3dd6970d6a' # product assets
+  restrictedLocationSubpath: null
+  selectionCondition:
+    __assoc__:
+      -
+        - elementType
+        - craft\elements\Asset
+      -
+        - fieldContext
+        - global
+      -
+        - class
+        - craft\elements\conditions\assets\AssetCondition
+      -
+        - conditionRules
+        -
+          -
+            __assoc__:
+              -
+                - class
+                - craft\elements\conditions\assets\FileSizeConditionRule
+              -
+                - uid
+                - 77757e79-5869-432b-906f-1c0525a55849
+              -
+                - operator
+                - '<'
+              -
+                - value
+                - '100'
+              -
+                - maxValue
+                - ''
+              -
+                - unit
+                - MB
+          -
+            __assoc__:
+              -
+                - class
+                - craft\elements\conditions\assets\WidthConditionRule
+              -
+                - uid
+                - 77578408-3e3c-40e2-9931-40ac4203ad10
+              -
+                - operator
+                - '='
+              -
+                - value
+                - '400'
+              -
+                - maxValue
+                - ''
+          -
+            __assoc__:
+              -
+                - class
+                - craft\elements\conditions\assets\HeightConditionRule
+              -
+                - uid
+                - 55d17ca9-3fde-44ae-ab59-f79887bc3cf3
+              -
+                - operator
+                - '='
+              -
+                - value
+                - '250'
+              -
+                - maxValue
+                - ''
+          -
+            __assoc__:
+              -
+                - class
+                - craft\elements\conditions\assets\FileTypeConditionRule
+              -
+                - uid
+                - a8d4143b-feb8-4c39-8f28-120d5f511542
+              -
+                - operator
+                - in
+              -
+                - values
+                -
+                  - image
+  selectionLabel: null
+  showSiteMenu: true
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  sources: '*'
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: large
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Assets

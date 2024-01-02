@@ -1,0 +1,17 @@
+columnSuffix: gpchlcit
+contentColumnType: integer(10)
+fieldGroup: 12a23e1e-d239-4fe3-a9d8-4dbdb167eaea # Common
+handle: price
+instructions: null
+name: price
+searchable: false
+settings:
+  currency: EUR
+  defaultValue: null
+  max: null
+  min: 0
+  showCurrency: true
+  size: null
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Money

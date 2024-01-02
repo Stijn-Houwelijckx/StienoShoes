@@ -1,13 +1,59 @@
-dateModified: 1703707847
+dateModified: 1704225933
 email:
   fromEmail: stijn@houwelijckx.be
   fromName: StienoShoes
   transportType: craft\mail\transportadapters\Sendmail
+fs:
+  assets:
+    hasUrls: true
+    name: Assets
+    settings:
+      path: '@webroot'
+    type: craft\fs\Local
+    url: '@web'
 meta:
   __names__:
+    0e105699-d704-4e98-80f4-46da67fcfc49: 'product description' # product description
+    000fde8f-92fe-4af7-abe8-6446a34ec616: 'color code' # color code
+    1a7e1c92-4bde-46db-bb2b-617e72bf0668: code # code
+    05d07e24-b3d3-404d-9a05-2cdf860ca856: 'simplified color' # simplified color
+    8bc57f9d-6d01-4ff5-a10e-615e012e77f9: Default # Default
+    08fa0d50-043c-4943-9aea-1aee467873fc: 'product image' # product image
     12a23e1e-d239-4fe3-a9d8-4dbdb167eaea: Common # Common
+    31d67c04-2224-4740-9e75-6f60b4ead20f: 'about us' # about us
+    43f2b41c-d6fc-4344-8592-b253e4ac0b8a: Default # Default
+    53a96423-2d94-44c3-839b-20edbbac6d6c: price # price
+    69a1934f-0fcc-4859-893c-0295510b65bf: 'color filters' # color filters
+    076b9e73-531b-4228-86a2-b4d74a5a565e: 'type filters' # type filters
+    300d134e-110d-4a69-8f40-ca9cc65edd49: advantages # advantages
+    581a7eb7-c031-4598-97ae-cdc625d831a1: 'size filters' # size filters
+    849d8a16-b71c-43bf-9ad3-98f0f07d495d: 'rich text' # rich text
+    865b7a0d-7cd6-4336-8d61-b1bfeb8a64a4: number # number
+    895bcf66-3626-4ac1-abe7-90286633b2d5: Default # Default
+    907fd379-c870-4bf1-9c88-27763cd8af4f: demographics # demographics
+    6177e6e4-d419-4a72-b27a-ca1bbcc327e8: heading # heading
+    57402bae-9be0-4a8e-9bd5-e288d98ce0b5: brand # brand
+    69740f04-3884-498b-92e7-565da08487ab: sizes # sizes
+    77294ccf-86d7-4dfa-8f01-c5aff12bc953: Default # Default
+    306898ac-ff86-49c3-a3c4-46657a23e04e: Default # Default
+    45788909-f113-4bf9-b378-15a25d52cd7b: products # products
+    70699232-1120-4f6c-86d3-51af3978bde5: heading # heading
+    a3aebb59-a9c2-4123-9aa4-012ef8bcae44: 'about us' # about us
+    a4bc6f82-e2be-4f2d-aa6c-e09db601a979: 'demographic filters' # demographic filters
     a246d019-06f9-40be-8bb2-78cfd99eb387: StienoShoes # StienoShoes
+    ae9e300f-dd91-4e79-a2ee-7d3dd6970d6a: 'product assets' # product assets
+    b0540d42-ef59-4108-9258-97f810841c0d: types # types
+    bce4b5f9-43f9-4bb1-aaf7-837f7dcb36ea: material # material
+    c2fab8bb-09ef-4560-9b6e-2df7fadbb5ea: colors # colors
     e79be201-6bfa-4c8d-82e2-cfb8455ee223: StienoShoes # StienoShoes
+    e98e436a-d171-473f-bd52-d64490487146: 'full color' # full color
+    f010c589-73fe-4e0a-ade9-3f8f5369e8a0: details # details
+    fa9f1dfa-00df-4208-b131-90e64c1776f9: Default # Default
+plugins:
+  abm-tinymce:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
 system:
   edition: solo
   live: true

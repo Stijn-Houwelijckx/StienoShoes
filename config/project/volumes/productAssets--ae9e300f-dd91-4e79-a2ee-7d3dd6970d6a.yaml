@@ -1,0 +1,67 @@
+fieldLayouts:
+  918305fd-af31-4f86-9008-52c77d6a94e5:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\assets\AssetTitleField
+            uid: 3b03acfc-ee80-4540-aac3-d5edda6395a7
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            attribute: alt
+            class: null
+            cols: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: true
+            required: false
+            rows: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\assets\AltField
+            uid: 0b11835b-f0f6-49a1-b2cf-6f7bd14e0152
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 2d3a662d-5ea3-46a9-bd34-575b61cfcb8f
+        userCondition: null
+fs: assets
+handle: productAssets
+name: 'product assets'
+sortOrder: 1
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+transformFs: ''
+transformSubpath: ''

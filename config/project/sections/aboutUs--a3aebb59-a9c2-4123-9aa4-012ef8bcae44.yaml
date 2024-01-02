@@ -1,0 +1,12 @@
+defaultPlacement: end
+enableVersioning: true
+handle: aboutUs
+name: 'about us'
+propagationMethod: all
+siteSettings:
+  e79be201-6bfa-4c8d-82e2-cfb8455ee223: # StienoShoes
+    enabledByDefault: true
+    hasUrls: true
+    template: about-us/_entry
+    uriFormat: about-us
+type: single

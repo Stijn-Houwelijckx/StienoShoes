@@ -1,0 +1,23 @@
+columnSuffix: rfhjtrwm
+contentColumnType: text
+fieldGroup: 12a23e1e-d239-4fe3-a9d8-4dbdb167eaea # Common
+handle: richText
+instructions: null
+name: 'rich text'
+searchable: false
+settings:
+  availableTransforms: ''
+  availableVolumes: '*'
+  columnType: text
+  purifierConfig: Default.json
+  purifyHtml: true
+  removeEmptyTags: false
+  removeInlineStyles: false
+  removeNbsp: false
+  showHtmlButtonForNonAdmins: false
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  tinymceConfig: Default.json
+translationKeyFormat: null
+translationMethod: none
+type: abmat\tinymce\Field

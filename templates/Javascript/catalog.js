@@ -30,6 +30,15 @@ filterCloseBtn.addEventListener("click", () => {
   }
 });
 
+overlayBG.addEventListener("click", () => {
+  const visibility = filterContainer.getAttribute("data-visible");
+
+  if (visibility === "true") {
+    filterContainer.setAttribute("data-visible", "false");
+    overlayBG.setAttribute("data-visible", "false");
+  }
+});
+
 //===== End Filter Open =====//
 
 document.addEventListener("DOMContentLoaded", function () {

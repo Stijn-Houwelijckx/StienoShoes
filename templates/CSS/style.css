@@ -1968,6 +1968,9 @@ p {
   padding-bottom: 40px;
 
   gap: 32px;
+
+  max-width: 1600px;
+  margin: auto;
 }
 
 .cart-section hr {
@@ -2007,9 +2010,17 @@ p {
 }
 
 .cart-section .cart-item {
+  display: flex;
+  gap: 40px;
+  width: 100%;
+}
+
+.cart-section .cart-item .cart-item-content {
   background-color: var(--clr-neutral-750);
   border-radius: 16px;
   padding: 12px 20px 12px 4px;
+  width: 100%;
+  display: flex;
 }
 
 .cart-section .cart-item .delete-btn,
@@ -2022,10 +2033,6 @@ p {
 
 .cart-section .item-name-size .price {
   display: block;
-}
-
-.cart-section .cart-item-content {
-  display: flex;
 }
 
 .cart-section .cart-item-content .item-info {
@@ -2092,6 +2099,10 @@ p {
     display: block;
   }
 
+  .cart-section .cart-item .size {
+    color: var(--clr-neutral-300);
+  }
+
   .cart-section .item-name-size .price {
     display: none;
   }
@@ -2130,6 +2141,57 @@ p {
 
   .cart-section .item-info .item-count {
     flex-direction: row-reverse;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .cart-section {
+    width: 75%;
+  }
+
+  .cart-section .wrapper {
+    padding: 80px 109px;
+  }
+
+  .cart-page-container {
+    display: flex;
+  }
+
+  .cart-section .title-container {
+    display: block;
+  }
+
+  .cart-section .title-container .back-btn {
+    display: none;
+  }
+
+  .cart-section .cart-item .cart-item-content {
+    padding: 28px 0px;
+    padding-right: 40px;
+  }
+
+  /* .cart-section .cart-item-content .item-info {
+    align-items: flex-start;
+  } */
+
+  .cart-section .cart-item .delete-btn {
+    display: block;
+  }
+
+  .cart-section .cart-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-right: 80px;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .cart-section .cart-item-content .item-image {
+    width: 180px;
+    margin-right: 40px;
+    padding-left: 20px;
   }
 }
 
@@ -2273,6 +2335,34 @@ form button {
 
 .payment-section .card-bottom-info .form-input {
   width: 40%;
+}
+
+@media only screen and (min-width: 600px) {
+  .payment-section .wrapper {
+    padding: 0 32px;
+    padding-top: 20px;
+    padding-bottom: 40px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .payment-section {
+    width: 25%;
+    height: 75%;
+  }
+
+  .payment-section .wrapper {
+    padding: 0 32px;
+    padding-top: 80px;
+    padding-bottom: 40px;
+
+    height: calc(100vh - 230px);
+  }
+
+  .payment-section .disclaimer-container {
+    padding: 80px 40px;
+    height: 25%;
+  }
 }
 
 /* End Payment Section */

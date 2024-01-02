@@ -454,6 +454,12 @@ p {
   }
 }
 
+@media only screen and (min-width: 1920px), screen and (min-height: 1140px) {
+  .home-section {
+    background-size: 120%;
+  }
+}
+
 /* End Home Section */
 
 /* ======================================================================== 

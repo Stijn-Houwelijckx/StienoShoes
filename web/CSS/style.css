@@ -1435,6 +1435,10 @@ p {
 }
 
 @media only screen and (min-width: 1200px) {
+  .catalog-section {
+    width: 100%;
+  }
+
   .catalog-section .sort-container .wrapper {
     padding: 80px 109px;
   }
@@ -1757,6 +1761,10 @@ p {
 
     border-radius: 360px;
   }
+
+  /* .product-section .button-price-container form button {
+    margin-top: 0;
+  } */
 }
 
 @media only screen and (min-width: 1920px), screen and (min-height: 1140px) {

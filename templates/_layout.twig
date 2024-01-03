@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="{{craft.app.language}}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{siteName}}</title>
+    {% do craft.app.view.registerCssFile('@web/CSS/normalize.css') %}
+    {% do craft.app.view.registerCssFile('@web/CSS/style.css?67643') %}
+</head>
+<body>
+    <header class="primary-header">
+      {% set header = craft.entries().section('header').one() %}
+      <div class="wrapper">
+        <a href="home.html" class="logo">
+          <img src="{{header.logo.one()}}.svg" alt="Logo" />
+        </a>
+
+        <nav
+          id="primary-navigation"
+          data-visible="false"
+          class="primary-navigation"
+        >
+          <img
+            src="{{ url('icons/Icon_Close.svg') }}"
+            class="close-btn"
+            alt="Close"
+          />
+
+          <ul class="primary-nav-list">
+            <li class="nav-link"><a href="home.html">Home</a></li>
+            <li class="nav-link"><a href="catalog.html">Catalog</a></li>
+            <li class="nav-link"><a href="#">About Us</a></li>
+          </ul>
+        </nav>
+
+        <div class="nav-icon-container">
+          <a href="shoppingCart.html" class="shoppingCart-icon">
+            <img src="{{ url('icons/Icon_Shoppingcart.svg') }}" alt="Shopping Cart" />
+          </a>
+          <a href="#" class="mobile-burger">
+            <img src="{{ url('icons/Icon_Burger.svg') }}" alt="Navigation Menu" />
+          </a>
+        </div>
+      </div>
+    </header>
+
+    {% block content %}
+    {# hier komt de content #}
+    {% endblock %}
+   
+    <footer>
+      <div class="wrapper">
+        {% set footer = craft.entries().section('footer').one() %}
+        <div class="footer-top">
+          <a href="home.html" class="logo">
+            <img src="{{footer.logo.one()}}.svg" alt="Logo" />
+          </a>
+
+          <ul class="footer-navigation">
+            <li class="nav-link"><a href="home.html">Home</a></li>
+            <li class="nav-link"><a href="catalog.html">Catalog</a></li>
+            <li class="nav-link"><a href="#">About Us</a></li>
+          </ul>
+
+          <div class="socials-icon-container">
+            {% set entries = craft.entries().section('socials').all() %}
+
+            {% for entry in entries %}
+              <a href="#">
+                <img src="{{ entry.socialIcon.one().url('') }}" alt="Twitter X" />
+              </a>
+            {% endfor %}
+
+            {# <a href="#">
+              <img src="{{ url('icons/Icon_Instagram.svg') }}" alt="Instagram" />
+            </a>
+            <a href="#">
+              <img src="{{ url('icons/Icon_Twitter.svg') }}" alt="Twitter X" />
+            </a>
+            <a href="#">
+              <img src="{{ url('icons/Icon_Facebook.svg') }}" alt="Facebook" />
+            </a> #}
+          </div>
+        </div>
+
+        <hr />
+
+        <div class="footer-bottom">
+        {% set footer = craft.entries().section('footer').one() %}
+          {{footer.richText}}
+        </div>
+      </div>
+    </footer>
+
+</body>
+</html>

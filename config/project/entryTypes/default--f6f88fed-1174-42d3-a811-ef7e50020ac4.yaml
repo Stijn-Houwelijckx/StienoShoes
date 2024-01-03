@@ -1,5 +1,5 @@
 fieldLayouts:
-  918305fd-af31-4f86-9008-52c77d6a94e5:
+  aa180850-6c2f-43a2-9914-94aa0e48bb75:
     tabs:
       -
         elementCondition: null
@@ -26,42 +26,34 @@ fieldLayouts:
             step: null
             tip: null
             title: null
-            type: craft\fieldlayoutelements\assets\AssetTitleField
-            uid: 3b03acfc-ee80-4540-aac3-d5edda6395a7
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 72525358-8d73-4617-8140-961b38e5605f
             userCondition: null
             warning: null
             width: 100
           -
-            attribute: alt
-            class: null
-            cols: null
-            disabled: false
             elementCondition: null
-            id: null
+            fieldUid: 780c595f-5f5c-4621-ae7f-88e28c4d59fc # social icon
             instructions: null
             label: null
-            name: null
-            orientation: null
-            placeholder: null
-            readonly: false
-            requirable: true
             required: false
-            rows: null
             tip: null
-            title: null
-            type: craft\fieldlayoutelements\assets\AltField
-            uid: 0b11835b-f0f6-49a1-b2cf-6f7bd14e0152
+            type: craft\fieldlayoutelements\CustomField
+            uid: b5170cc3-5518-4e16-9caa-cf2ca4522215
             userCondition: null
             warning: null
             width: 100
         name: Content
-        uid: 2d3a662d-5ea3-46a9-bd34-575b61cfcb8f
+        uid: 93afc15d-e2f3-4ac4-a984-53effc076090
         userCondition: null
-fs: productAssets
-handle: productAssets
-name: 'product assets'
+handle: default
+hasTitleField: true
+name: Default
+section: 5c215a5d-b23b-4057-bf1a-ea37fd9522f8 # socials
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
 sortOrder: 1
+titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
-transformFs: ''
-transformSubpath: ''

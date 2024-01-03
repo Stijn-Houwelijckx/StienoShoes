@@ -1,5 +1,5 @@
 fieldLayouts:
-  918305fd-af31-4f86-9008-52c77d6a94e5:
+  5086fc70-f17d-4b78-8207-744f36b1c3cd:
     tabs:
       -
         elementCondition: null
@@ -26,42 +26,46 @@ fieldLayouts:
             step: null
             tip: null
             title: null
-            type: craft\fieldlayoutelements\assets\AssetTitleField
-            uid: 3b03acfc-ee80-4540-aac3-d5edda6395a7
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: b8b0d4a0-d309-433c-9600-87e5b3e2b089
             userCondition: null
             warning: null
             width: 100
           -
-            attribute: alt
-            class: null
-            cols: null
-            disabled: false
             elementCondition: null
-            id: null
+            fieldUid: 849d8a16-b71c-43bf-9ad3-98f0f07d495d # rich text
             instructions: null
             label: null
-            name: null
-            orientation: null
-            placeholder: null
-            readonly: false
-            requirable: true
             required: false
-            rows: null
             tip: null
-            title: null
-            type: craft\fieldlayoutelements\assets\AltField
-            uid: 0b11835b-f0f6-49a1-b2cf-6f7bd14e0152
+            type: craft\fieldlayoutelements\CustomField
+            uid: 28181a47-565a-4298-821a-8252982f33d9
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 1166a931-1280-4577-89fa-201c8500389f # logo
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4afdb0af-268d-4a7f-b81c-4d15ad378fee
             userCondition: null
             warning: null
             width: 100
         name: Content
-        uid: 2d3a662d-5ea3-46a9-bd34-575b61cfcb8f
+        uid: 6692a424-d78f-49f3-a0e7-0a792577d29f
         userCondition: null
-fs: productAssets
-handle: productAssets
-name: 'product assets'
+handle: footer
+hasTitleField: false
+name: footer
+section: b7cc0da5-993a-44a9-8db4-70d177ac72a4 # footer
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
 sortOrder: 1
+titleFormat: '{section.name|raw}'
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
-transformFs: ''
-transformSubpath: ''

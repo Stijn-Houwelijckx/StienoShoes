@@ -1,5 +1,5 @@
 fieldLayouts:
-  918305fd-af31-4f86-9008-52c77d6a94e5:
+  6698b8c7-bb86-4849-8253-817c6a1e25f1:
     tabs:
       -
         elementCondition: null
@@ -27,7 +27,7 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\assets\AssetTitleField
-            uid: 3b03acfc-ee80-4540-aac3-d5edda6395a7
+            uid: b70ba914-97a7-4b7e-b6f1-5fe5fde82814
             userCondition: null
             warning: null
             width: 100
@@ -50,17 +50,17 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\assets\AltField
-            uid: 0b11835b-f0f6-49a1-b2cf-6f7bd14e0152
+            uid: 8b132ef0-08e8-4fda-bcb3-3cbd83bd10b3
             userCondition: null
             warning: null
             width: 100
         name: Content
-        uid: 2d3a662d-5ea3-46a9-bd34-575b61cfcb8f
+        uid: 67915307-9959-4381-8047-a71ba99279a2
         userCondition: null
-fs: productAssets
-handle: productAssets
-name: 'product assets'
-sortOrder: 1
+fs: generalAssets
+handle: generalAssets
+name: 'general assets'
+sortOrder: 2
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
 transformFs: ''

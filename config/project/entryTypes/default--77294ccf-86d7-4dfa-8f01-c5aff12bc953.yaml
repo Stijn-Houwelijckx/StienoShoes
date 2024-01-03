@@ -193,7 +193,7 @@ fieldLayouts:
 handle: default
 hasTitleField: true
 name: Default
-section: 45788909-f113-4bf9-b378-15a25d52cd7b # products
+section: 45788909-f113-4bf9-b378-15a25d52cd7b # catalog
 showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: site

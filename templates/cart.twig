@@ -1,0 +1,271 @@
+{% extends "_layout" %} 
+
+{% block content %}
+
+  <div class="cart-page-container">
+    <section class="cart-section">
+      <div class="wrapper">
+        <div class="title-container">
+          <a href="{{siteUrl}}catalog" class="back-btn">
+            <img src="{{ url('icons/Icon_ChevronLeft.svg') }}" alt="Back" />
+            <p>Back to catalog</p>
+          </a>
+
+          <h1 class="title">Your shopping cart.</h1>
+        </div>
+
+        <div class="cart-items-container">
+          <div class="cart-item">
+            <div class="cart-item-content">
+              <img src="assets/shoes/Shoe1.png" alt="Shoe" class="item-image" />
+              <div class="item-info">
+                <div class="item-name-size">
+                  <p class="name">Airmax apex velocity</p>
+                  <p class="size">Size 8.5</p>
+                  <p class="price"><span class="label">Pricing</span> € 240.00</p>
+                </div>
+
+                <hr />
+
+                <p class="color">Black</p>
+
+                <hr class="breakpoint-992" />
+
+                <div class="item-count">
+                  <button class="counter-btn plus-btn">
+                    <img src="{{ url('icons/Icon_Plus.svg') }}" alt="Plus" />
+                  </button>
+
+                  <p class="count">2</p>
+
+                  <button class="counter-btn minus-btn">
+                    <img src="{{ url('icons/Icon_Minus.svg') }}" alt="Minus" />
+                  </button>
+                </div> 
+
+                <hr class="breakpoint-992" />
+
+                <p class="price"><span class="label">Pricing</span> € 240.00</p>
+
+                <hr />
+              </div>
+            </div>
+
+            <button class="delete-btn">
+              <img src="{{ url('icons/Icon_Close.svg') }}" alt="delete" />
+            </button>
+          </div>
+
+          <div class="cart-item">
+            <div class="cart-item-content">
+              <img src="assets/shoes/Shoe2.png" alt="Shoe" class="item-image" />
+              <div class="item-info">
+                <div class="item-name-size">
+                  <p class="name">Airmax apex velocity</p>
+                  <p class="size">Size 8.5</p>
+                  <p class="price"><span class="label">Pricing</span> € 240.00</p>
+                </div>
+
+                <hr />
+
+                <p class="color">Black</p>
+
+                <hr class="breakpoint-992" />
+
+                <div class="item-count">
+                  <button class="counter-btn plus-btn">
+                    <img src="{{ url('icons/Icon_Plus.svg') }}" alt="Plus" />
+                  </button>
+
+                  <p class="count">2</p>
+
+                  <button class="counter-btn minus-btn">
+                    <img src="{{ url('icons/Icon_Minus.svg') }}" alt="Minus" />
+                  </button>
+                </div>
+
+                <hr class="breakpoint-992" />
+
+                <p class="price"><span class="label">Pricing</span> € 240.00</p>
+
+                <hr />
+              </div>
+            </div>
+
+            <button class="delete-btn">
+              <img src="{{ url('icons/Icon_Close.svg') }}" alt="delete" />
+            </button>
+          </div>
+
+          <div class="cart-item">
+            <div class="cart-item-content">
+              <img src="assets/shoes/Shoe3.png" alt="Shoe" class="item-image" />
+              <div class="item-info">
+                <div class="item-name-size">
+                  <p class="name">Airmax apex velocity</p>
+                  <p class="size">Size 8.5</p>
+                  <p class="price"><span class="label">Pricing</span> € 240.00</p>
+                </div>
+
+                <hr />
+
+                <p class="color">Black</p>
+
+                <hr class="breakpoint-992" />
+
+                <div class="item-count">
+                  <button class="counter-btn plus-btn">
+                    <img src="{{ url('icons/Icon_Plus.svg') }}" alt="Plus" />
+                  </button>
+
+                  <p class="count">2</p>
+
+                  <button class="counter-btn minus-btn">
+                    <img src="{{ url('icons/Icon_Minus.svg') }}" alt="Minus" />
+                  </button>
+                </div>
+
+                <hr class="breakpoint-992" />
+
+                <p class="price"><span class="label">Pricing</span> € 240.00</p>
+
+                <hr />
+              </div>
+            </div>
+
+            <button class="delete-btn">
+              <img src="{{ url('icons/Icon_Close.svg') }}" alt="delete" />
+            </button>
+          </div>
+
+          <div class="cart-item">
+            <div class="cart-item-content">
+              <img src="assets/shoes/Shoe4.png" alt="Shoe" class="item-image" />
+              <div class="item-info">
+                <div class="item-name-size">
+                  <p class="name">Airmax apex velocity</p>
+                  <p class="size">Size 8.5</p>
+                  <p class="price"><span class="label">Pricing</span> € 240.00</p>
+                </div>
+
+                <hr />
+
+                <p class="color">Black</p>
+
+                <hr class="breakpoint-992" />
+
+                <div class="item-count">
+                  <button class="counter-btn plus-btn">
+                    <img src="{{ url('icons/Icon_Plus.svg') }}" alt="Plus" />
+                  </button>
+
+                  <p class="count">2</p>
+
+                  <button class="counter-btn minus-btn">
+                    <img src="{{ url('icons/Icon_Minus.svg') }}" alt="Minus" />
+                  </button>
+                </div>
+
+                <hr class="breakpoint-992" />
+
+                <p class="price"><span class="label">Pricing</span> € 240.00</p>
+
+                <hr />
+              </div>
+            </div>
+
+            <button class="delete-btn">
+              <img src="{{ url('icons/Icon_Close.svg') }}" alt="delete" />
+            </button>
+          </div>
+        </div>
+
+        <div class="cart-bottom">
+          <a href="{{siteUrl}}catalog" class="back-btn">
+            <img src="{{ url('icons/Icon_ChevronLeft.svg') }}" alt="Back" />
+            <p>Back to catalog</p>
+          </a>
+
+          <p class="subtotal"><span class="label">Subtotal:</span> €210.00</p>
+        </div>
+      </div>
+    </section>
+
+    <aside class="payment-section">
+      <div class="wrapper">
+        <div class="title-container">
+          <h2 class="title">Card detail.</h2>
+
+          <p class="select-text">Select card type</p>
+
+          <div class="payment-options">
+            <button class="payment-option-btn">
+              <img src="{{ url('icons/Icon_Logo_Visa.svg') }}" alt="Visa" />
+            </button>
+            <button class="payment-option-btn">
+              <img src="{{ url('icons/Icon_Logo_PayPal.svg') }}" alt="PayPal" />
+            </button>
+            <button class="payment-option-btn">
+              <img src="{{ url('icons/Icon_Logo_Mastercard.svg') }}" alt="Mastercard" />
+            </button>
+          </div>
+        </div>
+
+        <form action="#" method="post">
+          <div class="form-input card-number-container">
+            <input
+              type="text"
+              class="input-field"
+              placeholder="card number"
+              name="card-number"
+              id="card-number"
+              required
+            />
+            <label for="card-number" class="input-label">card number</label>
+          </div>
+
+          <div class="card-bottom-info">
+            <div class="form-input card-expiry-container">
+              <input
+                type="text"
+                class="input-field"
+                placeholder="card expiry"
+                name="card-expiry"
+                id="card-expiry"
+                required
+              />
+              <label for="card-expiry" class="input-label">card expiry</label>
+            </div>
+
+            <div class="form-input card-CVV-container">
+              <input
+                type="text"
+                class="input-field"
+                placeholder="CVV"
+                name="card-CVV"
+                id="card-CVV"
+                required
+              />
+              <label for="card-CVV" class="input-label">CVV</label>
+            </div>
+          </div>
+
+          <button type="submit" class="checkout-btn">Checkout</button>
+        </form>
+      </div>
+      <div class="disclaimer-container">
+        <p class="disclaimer">
+          We carefully pack and deliver your shoes with utmost care, ensuring they
+          arrive at your doorstep in perfect condition. Unbox happiness as you
+          receive your new pair, thoughtfully delivered to you with precision and
+          care.
+        </p>
+      </div>
+    </aside>
+  </div>
+
+  <script>
+
+  </script>
+
+{% endblock %}

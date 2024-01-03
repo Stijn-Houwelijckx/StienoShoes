@@ -41,6 +41,8 @@ overlayBG.addEventListener("click", () => {
 
 //===== End Filter Open =====//
 
+//===== Begin Color FilterLabel =====//
+
 document.addEventListener("DOMContentLoaded", function () {
   var checkboxes = document.querySelectorAll('input[type="checkbox"]');
 
@@ -59,6 +61,8 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+//===== End Color FilterLabel =====//
 
 // const shoeSize = document.querySelectorAll(".size-filter-container .shoe-size");
 

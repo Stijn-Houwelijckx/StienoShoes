@@ -7,7 +7,7 @@
         {% set heading = craft.entries().section('heading').one() %}
         {{heading.richText}}
       </div>
-      <a href="catalog.html" class="primary-btn">Go to catalog</a>
+      <a href="{{siteUrl}}catalog" class="primary-btn">Go to catalog</a>
     </div>
   </section>
 
@@ -69,32 +69,10 @@
             <div class="card">
               <h3 class="title">{{entry.title}}</h3>
               <p class="price">{{entry.price|money}}</p>
-              <a href="catalog.html" class="small-btn">Go to catalog</a>
+              <a href="{{siteUrl}}catalog" class="small-btn">Go to catalog</a>
               <img src="{{entry.productImage.one().url('')}}" alt="Shoe" />
             </div>
           {% endfor %}
-
-          {# <div class="card">
-            <h3 class="title">FlexFit Fusion</h3>
-            <p class="price">€ 145.00</p>
-            <a href="catalog.html" class="small-btn">Go to catalog</a>
-            <img src="assets/shoes/Shoe14.png" alt="Shoe" />
-          </div>
-
-          <div class="card">
-            <h3 class="title">Epic React Elite</h3>
-            <p class="price">€ 225.00</p>
-            <a href="catalog.html" class="small-btn">Go to catalog</a>
-            <img src="assets/shoes/Shoe15.png" alt="Shoe" />
-          </div>
-
-          <div class="card">
-            <h3 class="title">Turbo Volt Vortex</h3>
-            <p class="price">€ 200.00</p>
-            <a href="catalog.html" class="small-btn">Go to catalog</a>
-            <img src="assets/shoes/Shoe16.png" alt="Shoe" />
-          </div> #}
-
           <a class="next-btn">
             <img src="{{ url('icons/Icon-ChevronLeft.svg') }}" alt="Previous" />
           </a>

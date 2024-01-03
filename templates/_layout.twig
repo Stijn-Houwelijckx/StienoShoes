@@ -11,8 +11,8 @@
     <header class="primary-header">
       {% set header = craft.entries().section('header').one() %}
       <div class="wrapper">
-        <a href="home.html" class="logo">
-          <img src="{{header.logo.one()}}.svg" alt="Logo" />
+        <a href="{{siteUrl}}" class="logo">
+          <img src="../{{header.logo.one()}}.svg" alt="Logo" />
         </a>
 
         <nav
@@ -27,8 +27,8 @@
           />
 
           <ul class="primary-nav-list">
-            <li class="nav-link"><a href="home.html">Home</a></li>
-            <li class="nav-link"><a href="catalog.html">Catalog</a></li>
+            <li class="nav-link"><a href="{{siteUrl}}">Home</a></li>
+            <li class="nav-link"><a href="{{siteUrl}}catalog">Catalog</a></li>
             <li class="nav-link"><a href="#">About Us</a></li>
           </ul>
         </nav>
@@ -58,13 +58,13 @@
       <div class="wrapper">
         {% set footer = craft.entries().section('footer').one() %}
         <div class="footer-top">
-          <a href="home.html" class="logo">
-            <img src="{{footer.logo.one()}}.svg" alt="Logo" />
+          <a href="{{siteUrl}}" class="logo">
+            <img src="../{{footer.logo.one()}}.svg" alt="Logo" />
           </a>
 
           <ul class="footer-navigation">
-            <li class="nav-link"><a href="home.html">Home</a></li>
-            <li class="nav-link"><a href="catalog.html">Catalog</a></li>
+            <li class="nav-link"><a href="{{siteUrl}}">Home</a></li>
+            <li class="nav-link"><a href="{{siteUrl}}catalog">Catalog</a></li>
             <li class="nav-link"><a href="#">About Us</a></li>
           </ul>
 

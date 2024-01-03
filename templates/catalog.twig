@@ -1,0 +1,235 @@
+{% extends "_layout" %}
+
+{% block content %}
+    <section class="catalog-banner-section">
+      <div class="title-container">
+        <h1 class="title">Catalog.</h1>
+      </div>
+
+      <div class="popular-card">
+        {% set catalogCard = craft.entries().section('catalog').one() %}
+
+        <h3 class="title">{{catalogCard.title}}</h3>
+        <p class="price">{{catalogCard.price|money}}</p>
+        <a href="{{siteUrl}}catalog" class="small-btn">Go to catalog</a>
+        <img src="{{catalogCard.productImage.one().url('')}}" alt="Shoe" />
+      </div>
+    </section>
+
+    <div class="overlay-background" data-visible="false"></div>
+
+    <div class="catalog-section-container">
+      <aside class="filter-container" data-visible="false">
+        <div class="title-container">
+          <h2 class="title">Filter.</h2>
+          <img src="{{ url('icons/Icon_ChevronRight.svg') }}" alt="close" />
+        </div>
+
+        <div class="wrapper gender-filter-container">
+          <form action="#" method="post" class="gender-filter-form">
+            {% set entries = craft.entries().section('demographicFilters').all() %}
+            
+            {% for entry in entries %}
+              <label for="{{ entry.slug }}" class="input-container">
+                {{entry.title}}
+                <input type="checkbox" name="{{ entry.slug }}" id="{{ entry.slug }}" />
+                <span class="checkmark">
+                  <img src="{{ url('icons/Icon_Checkmark.svg') }}" alt="Checkmark" />
+                </span>
+              </label>
+            {% endfor %}
+          </form>
+        </div>
+
+        <hr />
+
+        <div class="wrapper type-filter-container">
+          <form action="#" method="post" class="type-filter-form">
+            {% set entries = craft.entries().section('typeFilters').all() %}
+            
+            {% for entry in entries %}
+              <label for="{{ entry.slug }}" class="input-container">
+                {{entry.title}}
+                <input type="checkbox" name="{{ entry.slug }}" id="{{ entry.slug }}" />
+                <span class="checkmark">
+                  <img src="{{ url('icons/Icon_Checkmark.svg') }}" alt="Checkmark" />
+                </span>
+              </label>
+            {% endfor %}
+          </form>
+        </div>
+
+        <div class="price-filter-container">
+          <div class="filter-title-container">
+            <p class="filter-title">Pricing</p>
+          </div>
+
+          <form action="#" method="post" class="price-filter-form">
+            <input type="text" name="min-price" id="min-price" value="€ 0" />
+            <input
+              type="text"
+              name="max-price"
+              id="max-price"
+              value="€ 100.00"
+            />
+          </form>
+        </div>
+
+        <div class="wrapper color-filter-container">
+          <div class="filter-title-container">
+            <p class="filter-title">Colors</p>
+          </div>
+          <div class="color-boxes-container">
+            {% set entries = craft.entries().section('colorFilters').all() %}
+            
+            {% for entry in entries %}
+              <label for="{{ entry.slug }}" class="input-container">
+                <input type="checkbox" name="{{ entry.slug }}" id="{{ entry.slug }}" />
+                <span class="checkmark" style="background-color: {{entry.colorCode}}">
+                  <img src="{{ url('icons/Icon_Checkmark.svg') }}" alt="Checkmark" />
+                </span>
+              </label>
+            {% endfor %}
+          </div>
+        </div> 
+
+        <hr />
+
+        <div class="wrapper size-filter-container">
+          <div class="filter-title-container">
+            <p class="filter-title">Size</p>
+          </div>
+
+          <div class="size-boxes-container">
+
+            {% set entries = craft.entries().section('sizeFilters').all() %}
+            
+            {% for entry in entries %}
+              <label for="shoe-size-{{ entry.slug }}" class="input-container">
+                <input
+                  type="checkbox"
+                  name="shoe-size-{{ entry.slug }}"
+                  id="shoe-size-{{ entry.slug }}"
+                  class="shoe-size"
+                />
+              <span class="size-number">{{ entry.title }}</span>
+            </label>
+            {% endfor %}
+          </div>
+        </div>
+      </aside>
+
+      <section class="catalog-section">
+        <div class="sort-container">
+          <div class="wrapper">
+            <div class="title-container">
+              <h2 class="title">Filter.</h2>
+              <img src="{{ url('icons/Icon_ChevronRight.svg') }}" alt="Open" />
+            </div>
+
+            <div class="sort-filter-container">
+              <div class="sort-filter">
+                <p>Newest</p>
+                <img src="{{ url('icons/Icon_Sort.svg') }}" alt="Sorting" />
+              </div>
+              <div class="sort-filter">
+                <p>Price</p>
+                <img src="{{ url('icons/Icon_Sort.svg') }}" alt="Sorting" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="catalog-container">
+            {% set entries = craft.entries().section('catalog').all() %}
+
+            {% for entry in entries %}
+              <a href="{{entry.url}}" class="catalog-item">
+                <div class="product-image-container">
+                  <img src="{{entry.productImage.one().url('')}}" alt="Shoe" />
+                </div>
+                <div class="product-info">
+                  <div class="text-container">
+                    <h4 class="product-title">{{entry.title}}</h4>
+                    <p class="product-price">Pricing {{entry.price|money}}</p>
+                  </div>
+                  <img
+                    src="{{ url('icons/Icon_AddCart.svg') }}"
+                    alt="Add to cart"
+                    class="add-to-cart-icon"
+                  />
+                </div>
+              </a>
+            {% endfor %}
+        </div>
+      </section>
+    </div>
+
+  <script>
+    //===== Begin Filter Open =====//
+
+    const filterContainer = document.querySelector(".filter-container");
+    const overlayBG = document.querySelector(".overlay-background");
+    const filterOpenBtn = document.querySelector(
+    ".sort-container .title-container"
+    );
+    const filterCloseBtn = document.querySelector(
+    ".filter-container .title-container"
+    );
+
+    filterOpenBtn.addEventListener("click", () => {
+    const visibility = filterContainer.getAttribute("data-visible");
+
+    if (visibility === "false") {
+        filterContainer.setAttribute("data-visible", "true");
+        overlayBG.setAttribute("data-visible", "true");
+    } else if (visibility === "true") {
+        filterContainer.setAttribute("data-visible", "false");
+        overlayBG.setAttribute("data-visible", "false");
+    }
+    });
+
+    filterCloseBtn.addEventListener("click", () => {
+    const visibility = filterContainer.getAttribute("data-visible");
+
+    if (visibility === "true") {
+        filterContainer.setAttribute("data-visible", "false");
+        overlayBG.setAttribute("data-visible", "false");
+    }
+    });
+
+    overlayBG.addEventListener("click", () => {
+    const visibility = filterContainer.getAttribute("data-visible");
+
+    if (visibility === "true") {
+        filterContainer.setAttribute("data-visible", "false");
+        overlayBG.setAttribute("data-visible", "false");
+    }
+    });
+
+    //===== End Filter Open =====//
+
+    //===== Begin Color FilterLabel =====//
+
+    document.addEventListener("DOMContentLoaded", function () {
+    var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+
+    checkboxes.forEach(function (checkbox) {
+        checkbox.addEventListener("change", function (e) {
+        if (e.target.checked) {
+            console.log(e.target.name + " checked");
+
+            e.target.parentNode.classList.add("checked-label");
+        } else {
+            console.log(e.target.name + " not checked");
+
+            e.target.parentNode.classList.remove("checked-label");
+        }
+        });
+    });
+    });
+
+    //===== End Color FilterLabel =====//
+  </script>
+
+{% endblock %}

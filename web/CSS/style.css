@@ -1488,7 +1488,7 @@ p {
   }
 }
 
-@media only screen and (min-width: 1920px) {
+@media only screen and (min-width: 1800px) {
   .catalog-section .catalog-item {
     width: 25%;
   }

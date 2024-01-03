@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="{{craft.app.language}}">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{{siteName}}</title>
-    {% do craft.app.view.registerCssFile('@web/CSS/normalize.css') %}
-    {% do craft.app.view.registerCssFile('@web/CSS/style.css?67643') %}
-</head>
-<body>
+    {% do craft.app.view.registerCssFile('@web/CSS/normalize.css') %} {% do
+    craft.app.view.registerCssFile('@web/CSS/style.css?67643') %}
+  </head>
+  <body>
     <header class="primary-header">
       {% set header = craft.entries().section('header').one() %}
       <div class="wrapper">
@@ -35,19 +35,25 @@
 
         <div class="nav-icon-container">
           <a href="shoppingCart.html" class="shoppingCart-icon">
-            <img src="{{ url('icons/Icon_Shoppingcart.svg') }}" alt="Shopping Cart" />
+            <img
+              src="{{ url('icons/Icon_Shoppingcart.svg') }}"
+              alt="Shopping Cart"
+            />
           </a>
           <a href="#" class="mobile-burger">
-            <img src="{{ url('icons/Icon_Burger.svg') }}" alt="Navigation Menu" />
+            <img
+              src="{{ url('icons/Icon_Burger.svg') }}"
+              alt="Navigation Menu"
+            />
           </a>
         </div>
       </div>
     </header>
 
-    {% block content %}
+    {% block content %} 
     {# hier komt de content #}
     {% endblock %}
-   
+
     <footer>
       <div class="wrapper">
         {% set footer = craft.entries().section('footer').one() %}
@@ -63,34 +69,53 @@
           </ul>
 
           <div class="socials-icon-container">
-            {% set entries = craft.entries().section('socials').all() %}
-
+            {% set entries = craft.entries().section('socials').all() %} 
+            
             {% for entry in entries %}
-              <a href="#">
-                <img src="{{ entry.socialIcon.one().url('') }}" alt="Twitter X" />
-              </a>
+            <a href="#">
+              <img src="{{ entry.socialIcon.one().url('') }}" alt="Twitter X" />
+            </a>
             {% endfor %}
-
-            {# <a href="#">
-              <img src="{{ url('icons/Icon_Instagram.svg') }}" alt="Instagram" />
-            </a>
-            <a href="#">
-              <img src="{{ url('icons/Icon_Twitter.svg') }}" alt="Twitter X" />
-            </a>
-            <a href="#">
-              <img src="{{ url('icons/Icon_Facebook.svg') }}" alt="Facebook" />
-            </a> #}
           </div>
         </div>
 
         <hr />
 
         <div class="footer-bottom">
-        {% set footer = craft.entries().section('footer').one() %}
+          {% set footer = craft.entries().section('footer').one() %}
           {{footer.richText}}
         </div>
       </div>
     </footer>
 
-</body>
+      <script>
+        //===== Begin Mobile Navigation =====//
+
+        const primaryNav = document.querySelector(".primary-navigation");
+        const menuBtn = document.querySelector(".mobile-burger");
+        const closeBtn = document.querySelector(".primary-navigation .close-btn");
+
+        const navList = document.querySelector(".primary-nav-list");
+
+        menuBtn.addEventListener("click", () => {
+          const visibility = primaryNav.getAttribute("data-visible");
+
+          if (visibility === "false") {
+            primaryNav.setAttribute("data-visible", "true");
+          } else if (visibility === "true") {
+            primaryNav.setAttribute("data-visible", "false");
+          }
+        });
+
+        closeBtn.addEventListener("click", () => {
+          const visibility = primaryNav.getAttribute("data-visible");
+
+          if (visibility === "true") {
+            primaryNav.setAttribute("data-visible", "false");
+          }
+        });
+
+        //===== End Mobile Navigation =====//
+    </script>
+  </body>
 </html>

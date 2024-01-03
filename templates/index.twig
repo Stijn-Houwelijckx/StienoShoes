@@ -1,6 +1,216 @@
 {% extends "_layout" %}
 
+{% block content %}
+  <section class="home-section">
+    <div class="wrapper">
+      <div class="text-container">
+        {% set heading = craft.entries().section('heading').one() %}
+        {{heading.richText}}
+      </div>
+      <a href="catalog.html" class="primary-btn">Go to catalog</a>
+    </div>
+  </section>
 
-{% block content %}   
+  <section class="advantage-section">
+      <div class="wrapper">
+        <h2 class="title">Advantages.</h2>
+        <div class="advantage-cards-container">
+          {% set entries = craft.entries().section('advantages').orderBy('postDate asc').all() %}
 
-{% endblock %}   
+          {% for entry in entries %}
+            <div class="card" data-visible="false">
+              <div class="dropdown-head">
+                <div class="title-container">
+                  <p class="number">{{entry.number}}</p>
+                  <h3 class="title">{{entry.title}}</h3>
+                </div>
+                <img
+                  src="{{ url('icons/Icon_ChevronDown.svg') }}"
+                  class="chevron-down"
+                  alt="Chevron Down"
+                />
+              </div>
+
+              {{entry.richText}}
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+
+    <section class="popular-section">
+      <div class="wrapper">
+        <h2 class="title">Most Popular Products.</h2>
+
+        <div class="carousel-control">
+          <a class="prev-btn">
+            <img src="{{ url('icons/Icon-ChevronLeft.svg') }}" alt="Previous" />
+          </a>
+
+          <div class="dots-container">
+            <span class="dot"></span>
+            <span class="dot active"></span>
+            <span class="dot"></span>
+          </div>
+
+          <a class="next-btn">
+            <img src="{{ url('icons/Icon-ChevronLeft.svg') }}" alt="Previous" />
+          </a>
+        </div>
+
+        <div class="popular-cards-container">
+          <a class="prev-btn">
+            <img src="{{ url('icons/Icon-ChevronLeft.svg') }}" alt="Previous" />
+          </a>
+
+          {% set entries = craft.entries().section('catalog').limit(3) %}
+
+          {% for entry in entries %}
+            <div class="card">
+              <h3 class="title">{{entry.title}}</h3>
+              <p class="price">{{entry.price|money}}</p>
+              <a href="catalog.html" class="small-btn">Go to catalog</a>
+              <img src="{{entry.productImage.one().url('')}}" alt="Shoe" />
+            </div>
+          {% endfor %}
+
+          {# <div class="card">
+            <h3 class="title">FlexFit Fusion</h3>
+            <p class="price">€ 145.00</p>
+            <a href="catalog.html" class="small-btn">Go to catalog</a>
+            <img src="assets/shoes/Shoe14.png" alt="Shoe" />
+          </div>
+
+          <div class="card">
+            <h3 class="title">Epic React Elite</h3>
+            <p class="price">€ 225.00</p>
+            <a href="catalog.html" class="small-btn">Go to catalog</a>
+            <img src="assets/shoes/Shoe15.png" alt="Shoe" />
+          </div>
+
+          <div class="card">
+            <h3 class="title">Turbo Volt Vortex</h3>
+            <p class="price">€ 200.00</p>
+            <a href="catalog.html" class="small-btn">Go to catalog</a>
+            <img src="assets/shoes/Shoe16.png" alt="Shoe" />
+          </div> #}
+
+          <a class="next-btn">
+            <img src="{{ url('icons/Icon-ChevronLeft.svg') }}" alt="Previous" />
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-section">
+      <div class="wrapper">
+        {% set aboutUs = craft.entries().section('aboutUs').one() %}
+        {{aboutUs.richText}}
+      </div>
+      <div class="img-container">
+        <img src="{{ url('humans/ManHoldingShoe.png') }}" alt="Man holding shoe" />
+      </div>
+    </section>
+
+  <script>
+    //===== Begin Card Dropdown =====//
+
+    const advantageCard = document.querySelectorAll(
+      ".advantage-cards-container .card"
+    );
+    const advantageCardHandle = document.querySelectorAll(
+      ".advantage-cards-container .card .dropdown-head"
+    );
+
+    advantageCardHandle.forEach((item) => {
+      item.addEventListener("click", () => {
+        visibility = item.parentNode.getAttribute("data-visible");
+        // console.log(e.target);
+
+        if (visibility === "false") {
+          item.parentNode.setAttribute("data-visible", "true");
+        } else if (visibility === "true") {
+          item.parentNode.setAttribute("data-visible", "false");
+        }
+      });
+    });
+
+    //===== End Card Dropdown =====//
+
+    //===== Begin Popular Carousel =====//
+
+    const prevBtn1 = document.querySelector(
+      ".popular-section .carousel-control .prev-btn"
+    );
+    const nextBtn1 = document.querySelector(
+      ".popular-section .carousel-control .next-btn"
+    );
+
+    const prevBtn2 = document.querySelector(
+      ".popular-section .popular-cards-container .prev-btn"
+    );
+    const nextBtn2 = document.querySelector(
+      ".popular-section .popular-cards-container .next-btn"
+    );
+
+    const slides = document.querySelectorAll(
+      ".popular-section .popular-cards-container .card"
+    );
+    const dots = document.querySelectorAll(
+      ".popular-section .carousel-control .dot"
+    );
+
+    let slideIndex = 2;
+    showSlides(slideIndex);
+
+    prevBtn1.addEventListener("click", () => {
+      plusSlides(-1);
+    });
+    nextBtn1.addEventListener("click", () => {
+      plusSlides(1);
+    });
+
+    prevBtn2.addEventListener("click", () => {
+      plusSlides(-1);
+    });
+    nextBtn2.addEventListener("click", () => {
+      plusSlides(1);
+    });
+
+    // Next/previous controls
+    function plusSlides(n) {
+      showSlides((slideIndex += n));
+    }
+
+    // Thumbnail image controls
+    function currentSlide(n) {
+      showSlides((slideIndex = n));
+    }
+
+    function showSlides(n) {
+      let i;
+
+      if (n > slides.length) {
+        slideIndex = 1;
+      }
+
+      if (n < 1) {
+        slideIndex = slides.length;
+      }
+
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+
+      slides[slideIndex - 1].style.display = "flex";
+      dots[slideIndex - 1].className += " active";
+    }
+
+    //===== End Popular Carousel =====//
+  </script>
+
+{% endblock %}

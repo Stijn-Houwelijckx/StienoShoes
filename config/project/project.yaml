@@ -1,4 +1,4 @@
-dateModified: 1704329723
+dateModified: 1704329942
 email:
   fromEmail: stijn@houwelijckx.be
   fromName: StienoShoes
@@ -68,6 +68,10 @@ meta:
     fa9f1dfa-00df-4208-b131-90e64c1776f9: Default # Default
 plugins:
   abm-tinymce:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  element-api:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0

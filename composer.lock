@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e96e4b7cc1416c9fe13d3b10adce867b",
+    "content-hash": "f93db5070b2bbca30a20bc6fe59fe69e",
     "packages": [
         {
             "name": "abmat/craft-tinymce",
@@ -1809,6 +1809,53 @@
                 "psr-3"
             ],
             "time": "2023-10-27T15:25:26+00:00"
+        },
+        {
+            "name": "nystudio107/craft-cookies",
+            "version": "4.0.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nystudio107/craft-cookies/zipball/00146c6f22296c4431c2282ec2925f4fdd9638e1",
+                "reference": "00146c6f22296c4431c2282ec2925f4fdd9638e1",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^4.0.0"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "class": "nystudio107\\cookies\\Cookies",
+                "handle": "cookies",
+                "name": "Cookies"
+            },
+            "autoload": {
+                "psr-4": {
+                    "nystudio107\\cookies\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "nystudio107",
+                    "homepage": "https://nystudio107.com/"
+                }
+            ],
+            "description": "A simple plugin for setting and getting cookies from within Craft CMS templates.",
+            "keywords": [
+                "cms",
+                "cookies",
+                "craft",
+                "craft-plugin",
+                "craftcms"
+            ],
+            "support": {
+                "docs": "https://nystudio107.com/docs/cookies/",
+                "issues": "https://nystudio107.com/plugins/cookies/support",
+                "source": "https://github.com/nystudio107/craft-cookies"
+            },
+            "time": "2022-05-10T17:13:41+00:00"
         },
         {
             "name": "paragonie/random_compat",

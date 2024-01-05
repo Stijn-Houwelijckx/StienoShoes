@@ -16,9 +16,8 @@ return [
                     return [
                         'id' => $entry->id,
                         'title' => $entry->title,
-                        // 'intro' => $entry->introText,
-                        // 'bannerImg' => str_replace("https", "http", $entry->bannerImage->one()->getUrl('bannerImage')),
-                        // 'thumbImg' => str_replace("https", "http", $entry->bannerImage->one()->getUrl('thumbnailImage')),
+                        'price' => $entry->price,
+                        'productImg' => str_replace("https", "http", $entry->productImage->one()->getUrl('')),
                     ];
                 },
             ];
@@ -38,6 +37,24 @@ return [
                     //   'headerImg' => str_replace("https", "http", $entry->bannerImage->one()->getUrl('headerImage')),
                   ];
               },
+            ];
+        },
+        '/api/header' => function() {
+            return [
+                'elementType' => Entry::class,
+                'criteria' => ['section' => 'header'],
+                'cache' => false,
+                'serializer' => 'jsonFeed',
+                'transformer' => function(Entry $entry) {
+                    return [
+                        'logo' => str_replace("https", "http", $entry->logo->one()->getUrl('')),
+                        // 'id' => $entry->id,
+                        // 'title' => $entry->title,
+                        // 'intro' => $entry->introText,
+                        // 'bannerImg' => str_replace("https", "http", $entry->bannerImage->one()->getUrl('bannerImage')),
+                        // 'thumbImg' => str_replace("https", "http", $entry->bannerImage->one()->getUrl('thumbnailImage')),
+                    ];
+                },
             ];
         },
     ]

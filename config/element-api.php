@@ -17,6 +17,7 @@ return [
                         'id' => $entry->id,
                         'title' => $entry->title,
                         'price' => $entry->price,
+                        // 'fullColor' => $entry->fullColor,
                         'productImg' => str_replace("https", "http", $entry->productImage->one()->getUrl('')),
                     ];
                 },
@@ -30,11 +31,19 @@ return [
                 'cache' => false,
                 'serializer' => 'jsonFeed',
                 'transformer' => function(Entry $entry) {
+                    $sizes = [];
+                    foreach ($entry->sizes->all() as $size) {
+                        $sizes[] = $size->title;
+                    }
+
                   return [
-                      'id' => $entry->id,
-                      'title' => $entry->title,
-                    //   'fullText' => $entry->fullText,
-                    //   'headerImg' => str_replace("https", "http", $entry->bannerImage->one()->getUrl('headerImage')),
+                    'id' => $entry->id,
+                    'title' => $entry->title,
+                    'price' => $entry->price,
+                    'fullColor' => $entry->fullColor,
+                    'productDescription' => $entry->productDescription,
+                    'sizes' => $sizes, // Include the actual sizes
+                    'productImg' => str_replace("https", "http", $entry->productImage->one()->getUrl('')),
                   ];
               },
             ];

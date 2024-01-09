@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c3e77683e1661bd5ed273ca52c0acc1a",
+    "content-hash": "01434db96bb4f34bdf773c0cd2cd2418",
     "packages": [
         {
             "name": "abmat/craft-tinymce",
@@ -531,11 +531,11 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "4.5.14",
+            "version": "4.6.0",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/27277014272e8d372f0294bee60b274816f336b9",
-                "reference": "27277014272e8d372f0294bee60b274816f336b9",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/4d5f71c154cd2e01cfd771e55ed43703a59cf844",
+                "reference": "4d5f71c154cd2e01cfd771e55ed43703a59cf844",
                 "shasum": ""
             },
             "require": {
@@ -623,7 +623,7 @@
                 "docs": "https://craftcms.com/docs/4.x/",
                 "rss": "https://github.com/craftcms/cms/releases.atom"
             },
-            "time": "2024-01-02T17:52:44+00:00"
+            "time": "2024-01-09T17:57:33+00:00"
         },
         {
             "name": "craftcms/element-api",
@@ -2192,11 +2192,11 @@
         },
         {
             "name": "phpstan/phpdoc-parser",
-            "version": "1.24.5",
+            "version": "1.25.0",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/fedf211ff14ec8381c9bf5714e33a7a552dd1acc",
-                "reference": "fedf211ff14ec8381c9bf5714e33a7a552dd1acc",
+                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/bd84b629c8de41aa2ae82c067c955e06f1b00240",
+                "reference": "bd84b629c8de41aa2ae82c067c955e06f1b00240",
                 "shasum": ""
             },
             "require": {
@@ -2214,7 +2214,7 @@
                 "MIT"
             ],
             "description": "PHPDoc parser with support for nullable, intersection and generic types",
-            "time": "2023-12-16T09:33:33+00:00"
+            "time": "2024-01-04T17:06:16+00:00"
         },
         {
             "name": "pixelandtonic/imagine",
@@ -5197,6 +5197,65 @@
                 "yii2"
             ],
             "time": "2022-09-04T10:48:21+00:00"
+        },
+        {
+            "name": "youandmedigital/breadcrumb",
+            "version": "2.0.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/youandmedigital/craft-breadcrumb/zipball/f37656eda3c514ec3c37864ed448a9a4274ce590",
+                "reference": "f37656eda3c514ec3c37864ed448a9a4274ce590",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^4.0.0",
+                "php": "^8.0.2"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Breadcrumb",
+                "handle": "breadcrumb",
+                "hasCpSettings": false,
+                "hasCpSection": false,
+                "changelogUrl": "https://raw.githubusercontent.com/youandmedigital/craft-breadcrumb/craft-4/CHANGELOG.md",
+                "documentationUrl": "https://github.com/youandmedigital/craft-breadcrumb/blob/craft-4/README.md",
+                "components": {
+                    "breadcrumbService": "youandmedigital\\breadcrumb\\services\\BreadcrumbService"
+                },
+                "class": "youandmedigital\\breadcrumb\\Breadcrumb"
+            },
+            "autoload": {
+                "psr-4": {
+                    "youandmedigital\\breadcrumb\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "You & Me Digital",
+                    "homepage": "https://youandme.digital"
+                }
+            ],
+            "description": "Generate a simple breadcrumb",
+            "keywords": [
+                "breadcrumb",
+                "cms",
+                "craft",
+                "craft-plugin",
+                "craftcms",
+                "development",
+                "navigation",
+                "templating",
+                "utilities"
+            ],
+            "support": {
+                "docs": "https://github.com/youandmedigital/craft-breadcrumb",
+                "issues": "https://github.com/youandmedigital/craft-breadcrumb/issues",
+                "source": "https://github.com/youandmedigital/craft-breadcrumb"
+            },
+            "time": "2022-10-03T20:31:57+00:00"
         }
     ],
     "packages-dev": [

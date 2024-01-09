@@ -8,6 +8,32 @@
             <img src="{{ url('icons/Icon_ChevronLeft.svg') }}" alt="Back" />
             <p>Back to catalog</p>
           </a>
+          {# set a variable called myBreadcrumb #} 
+          {% set myBreadcrumb = craft.breadcrumb.config %}
+
+          {# If there is more than 1 item in the breadcrumb #}
+          {% if myBreadcrumb|length > 1 %}
+            <div class="c-breadcrumb">
+              <ol class="c-breadcrumb__items">
+                {% for crumb in myBreadcrumb %}
+                  {# The last item in the breadcrumb #}
+                  {% if loop.last %}
+                    <li class="c-breadcrumb__item">
+                      <span>{{ crumb.title }}</span>
+                    </li>
+                  {% else %}
+                    {# A normal link in the breadcrumb with '>' #}
+                    <li class="c-breadcrumb__item">
+                      <a class="c-breadcrumb__link" href="{{ crumb.url }}">
+                        <span>{{ crumb.title }}</span>
+                      </a>
+                      <span class="c-breadcrumb__separator">></span>
+                    </li>
+                  {% endif %}
+                {% endfor %}
+              </ol>
+            </div>
+          {% endif %}
 
           <div class="product-content-container">
             <div class="product-image">

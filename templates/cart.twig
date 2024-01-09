@@ -14,20 +14,26 @@
           <h1 class="title">Your shopping cart.</h1>
         </div>
 
+     
+
         <div class="cart-items-container">
+
+        {% set entries = craft.entries().section('catalog').limit(4) %}
+
+        {% for entry in entries %}
           <div class="cart-item">
             <div class="cart-item-content">
-              <img src="assets/shoes/Shoe1.png" alt="Shoe" class="item-image" />
+              <img src="{{entry.productImage.one().url('')}}" alt="Shoe" class="item-image" />
               <div class="item-info">
                 <div class="item-name-size">
-                  <p class="name">Airmax apex velocity</p>
+                  <p class="name">{{entry.title}}</p>
                   <p class="size">Size 8.5</p>
-                  <p class="price"><span class="label">Pricing</span> € 240.00</p>
+                  <p class="price"><span class="label">Pricing</span> {{entry.price|money}}</p>
                 </div>
 
                 <hr />
 
-                <p class="color">Black</p>
+                <p class="color">{{entry.simplifiedColor}}</p>
 
                 <hr class="breakpoint-992" />
 
@@ -45,7 +51,7 @@
 
                 <hr class="breakpoint-992" />
 
-                <p class="price"><span class="label">Pricing</span> € 240.00</p>
+                <p class="price"><span class="label">Pricing</span> {{entry.price|money}}</p>
 
                 <hr />
               </div>
@@ -54,131 +60,8 @@
             <button class="delete-btn">
               <img src="{{ url('icons/Icon_Close.svg') }}" alt="delete" />
             </button>
-          </div>
-
-          <div class="cart-item">
-            <div class="cart-item-content">
-              <img src="assets/shoes/Shoe2.png" alt="Shoe" class="item-image" />
-              <div class="item-info">
-                <div class="item-name-size">
-                  <p class="name">Airmax apex velocity</p>
-                  <p class="size">Size 8.5</p>
-                  <p class="price"><span class="label">Pricing</span> € 240.00</p>
-                </div>
-
-                <hr />
-
-                <p class="color">Black</p>
-
-                <hr class="breakpoint-992" />
-
-                <div class="item-count">
-                  <button class="counter-btn plus-btn">
-                    <img src="{{ url('icons/Icon_Plus.svg') }}" alt="Plus" />
-                  </button>
-
-                  <p class="count">2</p>
-
-                  <button class="counter-btn minus-btn">
-                    <img src="{{ url('icons/Icon_Minus.svg') }}" alt="Minus" />
-                  </button>
-                </div>
-
-                <hr class="breakpoint-992" />
-
-                <p class="price"><span class="label">Pricing</span> € 240.00</p>
-
-                <hr />
-              </div>
-            </div>
-
-            <button class="delete-btn">
-              <img src="{{ url('icons/Icon_Close.svg') }}" alt="delete" />
-            </button>
-          </div>
-
-          <div class="cart-item">
-            <div class="cart-item-content">
-              <img src="assets/shoes/Shoe3.png" alt="Shoe" class="item-image" />
-              <div class="item-info">
-                <div class="item-name-size">
-                  <p class="name">Airmax apex velocity</p>
-                  <p class="size">Size 8.5</p>
-                  <p class="price"><span class="label">Pricing</span> € 240.00</p>
-                </div>
-
-                <hr />
-
-                <p class="color">Black</p>
-
-                <hr class="breakpoint-992" />
-
-                <div class="item-count">
-                  <button class="counter-btn plus-btn">
-                    <img src="{{ url('icons/Icon_Plus.svg') }}" alt="Plus" />
-                  </button>
-
-                  <p class="count">2</p>
-
-                  <button class="counter-btn minus-btn">
-                    <img src="{{ url('icons/Icon_Minus.svg') }}" alt="Minus" />
-                  </button>
-                </div>
-
-                <hr class="breakpoint-992" />
-
-                <p class="price"><span class="label">Pricing</span> € 240.00</p>
-
-                <hr />
-              </div>
-            </div>
-
-            <button class="delete-btn">
-              <img src="{{ url('icons/Icon_Close.svg') }}" alt="delete" />
-            </button>
-          </div>
-
-          <div class="cart-item">
-            <div class="cart-item-content">
-              <img src="assets/shoes/Shoe4.png" alt="Shoe" class="item-image" />
-              <div class="item-info">
-                <div class="item-name-size">
-                  <p class="name">Airmax apex velocity</p>
-                  <p class="size">Size 8.5</p>
-                  <p class="price"><span class="label">Pricing</span> € 240.00</p>
-                </div>
-
-                <hr />
-
-                <p class="color">Black</p>
-
-                <hr class="breakpoint-992" />
-
-                <div class="item-count">
-                  <button class="counter-btn plus-btn">
-                    <img src="{{ url('icons/Icon_Plus.svg') }}" alt="Plus" />
-                  </button>
-
-                  <p class="count">2</p>
-
-                  <button class="counter-btn minus-btn">
-                    <img src="{{ url('icons/Icon_Minus.svg') }}" alt="Minus" />
-                  </button>
-                </div>
-
-                <hr class="breakpoint-992" />
-
-                <p class="price"><span class="label">Pricing</span> € 240.00</p>
-
-                <hr />
-              </div>
-            </div>
-
-            <button class="delete-btn">
-              <img src="{{ url('icons/Icon_Close.svg') }}" alt="delete" />
-            </button>
-          </div>
-        </div>
+          </div>          
+        {% endfor %}   
 
         <div class="cart-bottom">
           <a href="{{siteUrl}}catalog" class="back-btn">
@@ -188,7 +71,7 @@
 
           <p class="subtotal"><span class="label">Subtotal:</span> €210.00</p>
         </div>
-      </div>
+      </div> 
     </section>
 
     <aside class="payment-section">
